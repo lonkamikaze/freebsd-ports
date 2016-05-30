@@ -22,7 +22,7 @@ USES=		bison gmake
 USE_GCC=	yes
 PLIST_FILES=	sbin/grub-bhyve
 MAKE_JOBS_UNSAFE=	yes
-CONFIGURE_ARGS=	--with-platform=emu CC=${CC} LEX=${LOCALBASE}/bin/flex \
+CONFIGURE_ARGS=	--with-platform=emu CC=${CC:Q} LEX=${LOCALBASE}/bin/flex \
 		--enable-grub-mount=no --enable-grub-mkfont=no \
 		--enable-grub-emu-sdl=no --disable-nls --disable-werror
 

@@ -33,7 +33,7 @@ USE_JAVA=	yes
 JAVA_VERSION=	1.7+
 USES=		gmake
 USE_LDCONFIG=	yes
-MAKE_ARGS+=	Default_CXX=${CXX}
+MAKE_ARGS+=	Default_CXX=${CXX:Q}
 
 PLIST_FILES=	%%JAVAJARDIR%%/snappy-java.jar lib/libsnappyjava.so
 

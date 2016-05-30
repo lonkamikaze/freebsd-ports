@@ -19,7 +19,7 @@ USE_GL=		glut
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/game2
 BUILD_WRKSRC=	${WRKSRC}/gameSource
-MAKE_ARGS=	CXX=${CXX}
+MAKE_ARGS=	CXX=${CXX:Q}
 
 EXTRA_PATCHES=	${FILESDIR}/portaudio19.patch:-p2
 

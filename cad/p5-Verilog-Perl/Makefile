@@ -14,9 +14,9 @@ BUILD_DEPENDS=	flex>=2.5.35:textproc/flex
 
 USES=		bison gmake perl5
 USE_PERL5=	configure
-CONFIGURE_ENV=	CXX=${CXX}\
-		CPP=${CPP}\
-		CC=${CC}
+CONFIGURE_ENV=	CXX=${CXX:Q}\
+		CPP=${CPP:Q}\
+		CC=${CC:Q}
 
 .include <bsd.port.pre.mk>
 

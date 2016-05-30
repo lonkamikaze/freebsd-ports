@@ -43,7 +43,7 @@ post-extract:
 	cd ${SPEC} && ${SED} -e 's|\.\./\.\./|../|g' unsupported/freebsd-clang/qmake.conf > freebsd-clang/qmake.conf
 	cd ${SPEC} && ${SED} -e 's|\.\./\.\./|../|g' unsupported/freebsd-clang/qplatformdefs.h > freebsd-clang/qplatformdefs.h
 
-_ENV=	CC=${CC} CXX=${CXX} GMAKE=${GMAKE} OSTYPE=freebsd MAKEFLAGS=
+_ENV=	CC=${CC:Q} CXX=${CXX:Q} GMAKE=${GMAKE} OSTYPE=freebsd MAKEFLAGS=
 #_ENV+=	CFLAGS="-g -pipe"
 _BLD=	bash -x build.sh --jobs ${MAKE_JOBS_NUMBER} --confirm
 do-build:

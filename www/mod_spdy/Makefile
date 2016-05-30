@@ -72,8 +72,8 @@ BUILDTYPE=	Release
 GYP_DEFINES+=	buildtype=Official
 .endif
 
-CONFIGURE_ENV+=	CC=${CC} \
-		CXX=${CXX} \
+CONFIGURE_ENV+=	CC=${CC:Q} \
+		CXX=${CXX:Q} \
 		GYP_DEFINES="${GYP_DEFINES}"
 # according to portlint the below is passed via bsd.port.mk,
 # but 'make -V CONFIGURE_ENV' does not show it:

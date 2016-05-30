@@ -14,7 +14,7 @@ LICENSE=	BSD3CLAUSE
 USES=		tar:xz
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--prefix=${PREFIX}
-MAKE_ARGS+=	CC=${CC}
+MAKE_ARGS+=	CC=${CC:Q}
 
 PLIST_FILES=	bin/asm2html man/man1/asm2html.1.gz
 

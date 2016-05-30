@@ -81,11 +81,11 @@ pre-patch:
 
 post-build:
 .if ${PORT_OPTIONS:MAPACHE22}
-	(CC=${CC} CXX=${CXX} ${WRKSRC}/bin/passenger-install-apache2-module --auto)
+	(CC=${CC:Q} CXX=${CXX:Q} ${WRKSRC}/bin/passenger-install-apache2-module --auto)
 .endif
 
 .if ${PORT_OPTIONS:MNGINX}
-	(cd ${WRKSRC} && CC=${CC} CXX=${CXX} ${RAKE_BIN} nginx)
+	(cd ${WRKSRC} && CC=${CC:Q} CXX=${CXX:Q} ${RAKE_BIN} nginx)
 .endif
 
 	${FIND} ${WRKSRC} -name '*.o' -delete

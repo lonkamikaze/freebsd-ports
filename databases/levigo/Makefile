@@ -31,8 +31,8 @@ CC=		clang
 USE_GCC=	yes
 .endif
 
-CONFIGURE_ENV+=	CC=${CC} \
-		CXX=${CXX}
+CONFIGURE_ENV+=	CC=${CC:Q} \
+		CXX=${CXX:Q}
 GO_ENV+=	${CONFIGURE_ENV}
 
 .include <bsd.port.post.mk>

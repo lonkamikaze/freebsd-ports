@@ -49,7 +49,7 @@ post-patch:
 
 do-build:
 	cd ${WRKSRC}/src && \
-		CC=${CC} \
+		CC=${CC:Q} \
 		GOROOT=${WRKSRC} GOROOT_FINAL=${PREFIX}/go \
 		GOROOT_BOOTSTRAP=${LOCALBASE}/go14 \
 		GOBIN= GOARCH=${GOARCH} GOOS=${OPSYS:tl} \

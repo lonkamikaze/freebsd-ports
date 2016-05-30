@@ -30,7 +30,7 @@ BROKEN_sparc64=	Does not compile on sparc64: gcc bug
 
 do-build:
 	cd ${WRKSRC} && \
-	    ${SETENV} CC=${CC} CXX=${CXX} \
+	    ${SETENV} CC=${CC:Q} CXX=${CXX:Q} \
 		${SH} build.sh -platform ${PLATFORMKEYWORD} \
 		-qtbin ${QT_PREFIX}/bin \
 		-qtinc ${QT_INCDIR} \

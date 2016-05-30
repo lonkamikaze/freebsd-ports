@@ -176,7 +176,7 @@ post-patch:
 	@${FIND} ${WRKSRC} \( -name '*.orig' -o -name '*.bak' \) -delete
 
 do-build:
-	(cd ${WRKSRC} && ${SETENV} CC="${CC}" ${SH} make.sh ${MAKE_SH_ARGS})
+	(cd ${WRKSRC} && ${SETENV} CC=${CC:Q} ${SH} make.sh ${MAKE_SH_ARGS})
 	${RM} -rf ${WRKSRC}/contrib/sb-cover/test-output
 	${REINPLACE_CMD} -E -e \
 		's|\$$Date\$$|'"`${SETENV} LANG=C /bin/date '+%B %d, %Y'`|g" \
@@ -214,7 +214,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/sbcl.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 check regression-test test: build
-	(cd ${WRKSRC}/tests && ${SETENV} CC="${CC}" ${SH} run-tests.sh)
+	(cd ${WRKSRC}/tests && ${SETENV} CC=${CC:Q} ${SH} run-tests.sh)
 
 bootstrap:
 	${CP} -r ${WRKSRC} ${WRKDIR}/${NEWBOOTNAME}

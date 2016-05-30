@@ -16,7 +16,7 @@ LIB_DEPENDS=	liballeg.so:devel/allegro
 
 USES=		gmake
 MAKE_ARGS+=	PREFIX=${PREFIX}/
-MAKE_ARGS+=	CC=${CC} CPP=${CXX} LD=${LD}
+MAKE_ARGS+=	CC=${CC:Q} CPP=${CXX:Q} LD=${LD:Q}
 PATCH_DEBUG=	1
 
 PORTDOCS=	Changelog README README_ru.txt credits.txt

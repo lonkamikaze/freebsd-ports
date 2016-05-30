@@ -49,7 +49,7 @@ DISTFILES+=	X430src-1.tgz:x \
 
 .if ${OSVERSION} > 1000054
 USE_GCC=	yes
-MAKE_ENV=	IMAKECPP="${CPP}"
+MAKE_ENV=	IMAKECPP=${CPP:Q}
 MAKE_ARGS=	AR='ar rc'
 .endif
 
@@ -89,9 +89,9 @@ post-build:
 	@${ECHO_MSG} "Skipping build of VNC server."
 .else
 .if ${OSVERSION} > 1000054
-	cd ${WRKSRC}/xc && ${MAKE_ENV} make CC=${CC} CXX=${CXX} ${MAKE_ARGS} World
+	cd ${WRKSRC}/xc && ${MAKE_ENV} make CC=${CC:Q} CXX=${CXX:Q} ${MAKE_ARGS} World
 .else
-	cd ${WRKSRC}/xc && make CC=${CC} CXX=${CXX} World
+	cd ${WRKSRC}/xc && make CC=${CC:Q} CXX=${CXX:Q} World
 .endif
 .endif
 

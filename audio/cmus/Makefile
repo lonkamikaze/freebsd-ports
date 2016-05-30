@@ -17,7 +17,7 @@ USE_GITHUB=	yes
 
 USES=		gmake pkgconfig iconv ncurses
 HAS_CONFIGURE=	yes
-CONFIGURE_ENV+=	HOSTCC=${CC}
+CONFIGURE_ENV+=	HOSTCC=${CC:Q}
 CONFIGURE_ARGS+=prefix=${PREFIX} mandir=${MANPREFIX}/man \
 		exampledir=${EXAMPLESDIR} \
 		CONFIG_ALSA=n CONFIG_ARTS=n CONFIG_ROAR=n

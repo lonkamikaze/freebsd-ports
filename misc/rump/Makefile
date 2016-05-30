@@ -24,7 +24,7 @@ IGNORE=		require 10.0-Release or later
 .endif
 
 do-build:
-	cd ${WRKSRC}; ${SETENV} CC=${CC} AR=${AR} NM=${NM} OBJCOPY=${OBJCOPY} ./buildrump.sh -r fullbuild
+	cd ${WRKSRC}; ${SETENV} CC=${CC:Q} AR=${AR:Q} NM=${NM:Q} OBJCOPY=${OBJCOPY} ./buildrump.sh -r fullbuild
 
 do-install:
 	cd ${WRKSRC}/rump; ${PAX} -wr lib include ${STAGEDIR}${PREFIX}/

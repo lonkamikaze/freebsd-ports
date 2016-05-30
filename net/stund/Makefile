@@ -13,7 +13,7 @@ COMMENT=	Simple STUN (RFC 3489) server and client
 USES=		gmake tar:tgz
 USE_RC_SUBR=	stund
 
-MAKE_ENV=	"CXX=${CXX}"
+MAKE_ENV=	CXX=${CXX:Q}
 
 post-extract:
 	@${MV} ${WRKDIR}/${PORTNAME} ${WRKSRC}

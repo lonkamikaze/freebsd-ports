@@ -15,6 +15,6 @@ GNU_CONFIGURE=	yes
 USES=		gmake libtool pathfix
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
-MAKE_ARGS=	CC=${CC} CCC=${CXX}
+MAKE_ARGS=	CC=${CC:Q} CCC=${CXX:Q}
 
 .include <bsd.port.mk>

@@ -16,7 +16,7 @@ BUILD_DEPENDS=	doxygen:devel/doxygen
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
-CONFIGURE_ENV=	CXX=${CXX}
+CONFIGURE_ENV=	CXX=${CXX:Q}
 
 USES=		gmake
 USE_LDCONFIG=	yes

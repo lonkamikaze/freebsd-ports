@@ -19,7 +19,7 @@ LIB_DEPENDS=	libpng.so:graphics/png
 USES=		gmake jpeg tar:tgz
 USE_SDL=	sdl mixer
 USE_GL=		gl
-MAKE_ARGS=	CXX=${CXX}
+MAKE_ARGS=	CXX=${CXX:Q}
 
 PLIST_FILES=	bin/${PORTNAME}
 PORTDATA=	*

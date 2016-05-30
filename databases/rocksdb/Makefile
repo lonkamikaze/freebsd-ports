@@ -21,7 +21,7 @@ OPTIONS_DEFINE=	DEBUG
 
 ALL_TARGET=	shared_lib static_lib all
 CPPFLAGS+=	-DOS_FREEBSD
-MAKE_ENV=	CXX=${CXX}
+MAKE_ENV=	CXX=${CXX:Q}
 USE_CXXSTD=	c++11
 USE_LDCONFIG=	yes
 USES=		compiler:c++11-lib gmake localbase

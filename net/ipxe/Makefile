@@ -33,8 +33,8 @@ USES=		gmake perl5 shebangfix
 USE_BINUTILS=	yes
 USE_GCC=	yes
 MAKE_ARGS=	PERL=${PERL} \
-		CC=${CC} \
-		HOST_CC=${CC} \
+		CC=${CC:Q} \
+		HOST_CC=${CC:Q} \
 		OBJCOPY="${LOCALBASE}/bin/objcopy" \
 		ISOLINUX_BIN="${WRKSRC}/isolinux.bin" \
 		LDLINUX_C32="${LOCALBASE}/share/syslinux/bios/com32/elflink/ldlinux/ldlinux.c32"

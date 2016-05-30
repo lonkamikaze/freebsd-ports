@@ -18,7 +18,7 @@ USE_GCC=	yes
 MAKE_JOBS_UNSAFE=	yes
 CFLAGS+=	"-fPIC"
 CPPFLAGS+=	"-fPIC"
-MAKE_ARGS+=	CC=${CC} HOSTCC=${CC} AR=${AR}
+MAKE_ARGS+=	CC=${CC:Q} HOSTCC=${CC:Q} AR=${AR:Q}
 ONLY_FOR_ARCHS=	amd64
 
 .include <bsd.port.mk>

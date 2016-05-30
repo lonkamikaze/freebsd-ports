@@ -21,7 +21,7 @@ OUTPUT_LIST=	aout bin elf hunk test tos vobj
 do-build:
 .for CPU in ${CPU_LIST}
 .for SYNTAX in ${SYNTAX_LIST}
-	${GMAKE} -C ${WRKSRC} CC=${CC} CPU=${CPU} SYNTAX=${SYNTAX} >/dev/null 2>&1
+	${GMAKE} -C ${WRKSRC} CC=${CC:Q} CPU=${CPU} SYNTAX=${SYNTAX} >/dev/null 2>&1
 .endfor
 .endfor
 
