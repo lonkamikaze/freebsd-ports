@@ -19,7 +19,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_XORG=	x11 xt
 
-MAKE_ARGS=	CC="${CC}" LIBS="-L${LOCALBASE}/lib -lX11" \
+MAKE_ARGS=	CC=${CC:Q} LIBS="-L${LOCALBASE}/lib -lX11" \
 		DEBUG="${CFLAGS} -I${LOCALBASE}/include" \
 		FILE_CONFIG=-DSAVED_GAME_NAME='\"affenspiel.saved\"'
 

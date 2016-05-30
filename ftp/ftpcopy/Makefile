@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/web/${DISTNAME}
 OPTIONS_DEFINE=	DOCS
 
 pre-build:
-	${ECHO} "${CC}" >${WRKSRC}/src/conf-cc
+	${ECHO} ${CC:Q} >${WRKSRC}/src/conf-cc
 	${ECHO} "${CPPFLAGS} ${CFLAGS}" >${WRKSRC}/src/conf-cflags
 	${ECHO} "${LDFLAGS}" >${WRKSRC}/src/conf-ldflags
 

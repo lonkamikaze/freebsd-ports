@@ -23,7 +23,7 @@ USES=		pkgconfig tar:tbz
 USE_XORG=	x11 xext xrandr xrender xinerama xft
 
 MAKE_ARGS=	PREFIX="${PREFIX}" INCLUDE="${LOCALBASE}/include" \
-		CC="${CC} -c" LD="${CC}" LIBIXP="-lixp" STATIC="" \
+		CC="${CC} -c" LD=${CC:Q} LIBIXP="-lixp" STATIC="" \
 		MAN="${MANPREFIX}/man" DOC="${DOCSDIR}"
 MAKE_ENV=	noisycc=1	# unmute build commands, useful for logs
 

@@ -14,7 +14,7 @@ COMMENT=	Converts among various molecular file formats
 CONFLICTS_INSTALL=	openbabel-*
 
 USES=		tar:Z
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 PLIST_FILES=	bin/babel libexec/babel
 PORTDATA=	element.lis new.lis quanta.lis types.lis

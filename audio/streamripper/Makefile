@@ -56,7 +56,7 @@ post-patch:
 		${WRKSRC}/cdk-5.0-20060507/include/cdk.h
 
 pre-configure:
-	(cd ${WRKSRC}/cdk-${CDK_VERSION} && ${SETENV} CC="${CC}" \
+	(cd ${WRKSRC}/cdk-${CDK_VERSION} && ${SETENV} CC=${CC:Q} \
 		CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" ${SH} ./configure)
 
 pre-build:

@@ -29,7 +29,7 @@ post-patch:
 
 do-build:
 	@(cd ${WRKSRC} && \
-		CXX="${CXX}" CFLAGS="${CXXFLAGS}" ${PYTHON_CMD} configure.py --bootstrap)
+		CXX=${CXX:Q} CFLAGS="${CXXFLAGS}" ${PYTHON_CMD} configure.py --bootstrap)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ninja ${STAGEDIR}${PREFIX}/bin

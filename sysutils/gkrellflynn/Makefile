@@ -16,7 +16,7 @@ RUN_DEPENDS=	gkrellm:sysutils/gkrellm2
 
 USES=		pkgconfig
 USE_GNOME=	gtk20
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -c -fPIC"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} -c -fPIC"
 ALL_TARGET=	${PORTNAME}.so
 
 CFLAGS+=	`pkg-config --cflags gtk+-2.0 gthread-2.0` \

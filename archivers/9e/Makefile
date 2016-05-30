@@ -17,7 +17,7 @@ LICENSE_TEXT=	http://opensource.org/licenses/LPL-1.02
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 PLIST_FILES=	bin/9e
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LIBS="" HDRS=""
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LIBS="" HDRS=""
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/9e ${STAGEDIR}${PREFIX}/bin

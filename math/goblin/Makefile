@@ -17,9 +17,9 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 USES=		gmake tk tar:tgz
 USE_LDCONFIG=	yes
-MAKE_ARGS=	CC="${CC}" CCFLAGS="${CFLAGS}" \
-		CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" \
-		LD="${CXX}" LIBS="${LIBS}" \
+MAKE_ARGS=	CC=${CC:Q} CCFLAGS="${CFLAGS}" \
+		CXX=${CXX:Q} CXXFLAGS="${CXXFLAGS}" \
+		LD=${CXX:Q} LIBS="${LIBS}" \
 		libtcl=${TCL_SHLIB_VER} libtk=${TK_SHLIB_VER} \
 		prefix=${PREFIX}
 ALL_TARGET=	all shared

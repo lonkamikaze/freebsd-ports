@@ -16,7 +16,7 @@ NO_WRKSUBDIR=	yes
 
 USES=		gmake zip
 
-MAKE_ARGS=	CC="${CC}" LD="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} LD=${CC:Q} CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 
 do-install:
 .for file in huc isolink nesasm pceas pcxtool

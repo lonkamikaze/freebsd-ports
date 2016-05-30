@@ -55,7 +55,7 @@ CONFIGURE_ARGS+=--with-system-pinerc=${PREFIX}/etc/alpine.conf \
 CONFIGURE_ARGS+=--with-debug-level=2 \
 		--enable-background-post --without-krb5 --without-tcl
 
-MAKE_ARGS+=	CC="${CC}" CXX="${CXX}" GCCCFLAGS="${CFLAGS}"
+MAKE_ARGS+=	CC=${CC:Q} CXX=${CXX:Q} GCCCFLAGS="${CFLAGS}"
 
 .include <bsd.port.options.mk>
 

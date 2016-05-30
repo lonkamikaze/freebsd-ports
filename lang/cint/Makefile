@@ -16,7 +16,7 @@ BUILD_DEPENDS=	bash:shells/bash
 
 EXTRACT_SUFX=	.tgz
 HAS_CONFIGURE=	yes
-CONFIGURE_ENV=	CC="${CC}" CXX="${CXX}" LDFLAGS="${LDFLAGS}"
+CONFIGURE_ENV=	CC=${CC:Q} CXX=${CXX:Q} LDFLAGS="${LDFLAGS}"
 USE_GCC=	yes
 USES=		gmake readline
 USE_LDCONFIG=	${PREFIX}/lib/cint

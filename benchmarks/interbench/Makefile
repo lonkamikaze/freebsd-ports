@@ -13,7 +13,7 @@ COMMENT=	Interactivity benchmark for Unix-like systems
 LICENSE=	GPLv2
 
 USES=		gmake tar:bzip2
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 ALL_TARGET=	${PORTNAME}
 
 PLIST_FILES=	bin/${PORTNAME} man/man8/${PORTNAME}.8.gz

@@ -15,7 +15,7 @@ PLIST_FILES=	bin/Mixer.app
 WRKSRC=		${WRKDIR}/Mixer.app-${PORTVERSION}
 CXXFLAGS+=	-fno-rtti -fno-exceptions -I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lXpm -lXext -lX11
-MAKE_ARGS=	CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}"
+MAKE_ARGS=	CXX=${CXX:Q} CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}"
 
 USE_XORG=	xpm xext x11
 

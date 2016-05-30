@@ -16,7 +16,7 @@ USES=		dos2unix gmake zip
 
 NO_WRKSUBDIR=	yes
 MAKEFILE=	${WRKSRC}/Makefile.linux
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 ALL_TARGET=	${PORTNAME}
 
 PLIST_FILES=	bin/${PORTNAME}

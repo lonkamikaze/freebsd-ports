@@ -26,7 +26,7 @@ post-patch:
 .endif
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} CC="${CC}" LINKER="${CC}" \
+	cd ${WRKSRC} && ${SETENV} CC=${CC:Q} LINKER=${CC:Q} \
 		COMP_FLAGS="${CPPFLAGS} ${CFLAGS}" LINK_FLAGS="${LDFLAGS}" \
 		${SH} build.sh
 	cd ${WRKSRC} && bin/nim c --parallelBuild=${MAKE_JOBS_NUMBER} koch

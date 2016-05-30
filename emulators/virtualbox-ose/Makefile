@@ -41,7 +41,7 @@ USE_OPENSSL=	yes
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--disable-java --passive-mesa
-CONFIGURE_ARGS+=	--with-gcc="${CC}" --with-g++="${CXX}"
+CONFIGURE_ARGS+=	--with-gcc=${CC:Q} --with-g++=${CXX:Q}
 
 CONFLICTS_INSTALL=	virtualbox-ose-additions-4* \
 			virtualbox-ose-additions-devel-4* \

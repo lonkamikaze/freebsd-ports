@@ -14,7 +14,7 @@ COMMENT=	Program for generating various statistics on emails
 
 PLIST_FILES=	bin/mls man/man1/mls.1.gz
 
-MAKE_ARGS+=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS+=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 ALL_TARGET=	mls
 
 .include <bsd.port.mk>

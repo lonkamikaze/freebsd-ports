@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.corpit.ru/ftp/avcheck/
 MAINTAINER=	dsh@vlink.ru
 COMMENT=	Simple antivirus solution for a mail system
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 PLIST_FILES=	man/man1/avcheck.1.gz sbin/avcheck sbin/uchroot
 PORTDOCS=	README.AVP README.AVP.de README.DrWeb README.Exim \

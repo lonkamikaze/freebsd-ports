@@ -19,8 +19,8 @@ LIB_DEPENDS=	libfftw.so:math/fftw
 ALL_TARGET=	gramofile
 USES=		gmake perl5
 USE_CSTD=	gnu89
-MAKE_ARGS=	CC="${CC}" \
-		CXX="${CXX}" \
+MAKE_ARGS=	CC=${CC:Q} \
+		CXX=${CXX:Q} \
 		PERLCOREDIR=${PERLCOREDIR}
 
 PERLCOREDIR=	${LOCALBASE}/lib/perl5/${PERL_VER}/${PERL_ARCH}/CORE

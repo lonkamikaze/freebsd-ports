@@ -16,7 +16,7 @@ USE_RC_SUBR=	beanstalkd
 
 GH_ACCOUNT=	kr
 
-MAKE_ARGS+=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS+=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 PLIST_FILES=	bin/beanstalkd man/man1/beanstalkd.1.gz
 SUB_LIST+=	RC_SUBR_SUFFIX=${RC_SUBR_SUFFIX}

@@ -73,7 +73,7 @@ post-patch:
 	@${REINPLACE_CMD} -e '/^cd $$PLAN9/d' ${WRKSRC}/lib/moveplan9.sh
 
 do-build:
-	cd ${WRKSRC} && CC9="${CC}" ./INSTALL
+	cd ${WRKSRC} && CC9=${CC:Q} ./INSTALL
 
 # Dynamic PLIST sucks, but it's over 8K lines, which sucks even more :(
 post-build:

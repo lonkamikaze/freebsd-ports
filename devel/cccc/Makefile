@@ -14,7 +14,7 @@ LICENSE=	GPLv2+
 
 USES=		gmake
 MAKEFILE=	makefile
-MAKE_ENV=	CCC="${CXX}" LD="${CXX}" CFLAGS_DEBUG="${CXXFLAGS}"
+MAKE_ENV=	CCC=${CXX:Q} LD=${CXX:Q} CFLAGS_DEBUG="${CXXFLAGS}"
 MAKE_JOBS_UNSAFE=	yes
 
 PORTDOCS=	readme.txt changes.txt

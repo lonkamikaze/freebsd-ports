@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 
 USES=		ncurses
 INSTALL_TARGET=	install install.man
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 
 post-patch:
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g' ${FILESDIR}/predict.h > ${WRKSRC}/predict.h

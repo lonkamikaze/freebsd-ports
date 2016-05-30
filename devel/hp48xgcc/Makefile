@@ -32,7 +32,7 @@ INSTALL_TARGET=	build-lib
 MAKE_ARGS=	GCC_SRC="${GCC_DIR}" GCC_VERSION="${GCC_VER}" \
 		CFLAGS="${CFLAGS}" CLIB="" ROOT="${STAGEDIR}${PREFIX}" \
 		INSTALL_PROG="${INSTALL_PROGRAM}" \
-		INSTALL_DATA="${INSTALL_DATA}" LDXX="${CXX}"
+		INSTALL_DATA="${INSTALL_DATA}" LDXX=${CXX:Q}
 
 post-extract: .SILENT
 # Extract GCC distribution separately because of USE_ZIP/.tar.gz conflict

@@ -31,10 +31,10 @@ post-patch:
 		${WRKSRC}/src/Jamfile
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} C++="${CXX}" C++FLAGS="${CXXFLAGS}" \
+	cd ${WRKSRC} && ${SETENV} C++=${CXX:Q} C++FLAGS="${CXXFLAGS}" \
 		CCFLAGS="${CFLAGS} -DDATADIR=\\\"${PREFIX}/share\\\"" \
 		HDRS="${LOCALBASE}/include" \
-		LINK="${CXX}" LINKFLAGS="${LDFLAGS}" \
+		LINK=${CXX:Q} LINKFLAGS="${LDFLAGS}" \
 		${JAM} -dx -sPREFIX=${PREFIX}
 
 do-install:

@@ -13,7 +13,7 @@ MAINTAINER=	sacchi@gmail.com
 COMMENT=	System performance measurement tool
 
 ALL_TARGET=	build
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 MAKE_ENV=	PATH=${PATH}:${WRKSRC}/scripts
 USES=		shebangfix perl5 gmake tar:tgz
 USE_PERL5=	run

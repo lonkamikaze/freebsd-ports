@@ -23,7 +23,7 @@ HAS_CONFIGURE=	yes
 CPPFLAGS+=	-D_GLIBCXX_USE_C99 -D_GLIBCXX_USE_C99_MATH_TR1 \
 		-D_DECLARE_C99_LDBL_MATH # XXX ports/193528
 CONFIGURE_ARGS=	--install="${STAGEDIR}${DATADIR}" \
-		--cxx="${CXX}" \
+		--cxx=${CXX:Q} \
 		--extra-cxxflags="${CPPFLAGS} ${CXXFLAGS}" \
 		--extra-ldflags="${LDFLAGS}" \
 		--extra-libs="${LIBS}"

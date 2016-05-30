@@ -14,7 +14,7 @@ GH_TAGNAME=	776a521
 USE_XORG=	x11
 MAKEFILE=	Makefile.noimake
 ALL_TARGET=	9menu
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib -lX11"
 PLIST_FILES=	bin/9menu man/man1/9menu.1.gz
 

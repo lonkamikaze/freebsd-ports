@@ -10,7 +10,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Utility which adds text to images
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	CPP="${CPP}"
+CONFIGURE_ENV+=	CPP=${CPP:Q}
 CONFIGURE_ARGS+=	--with-builtin="ncenB24.bdf -scale 0.5 -blur 5"
 MAKE_ARGS=	install_prefix=${STAGEDIR}
 

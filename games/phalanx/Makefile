@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/p/P/:S/-source//}
 
 USES=		gmake tar:tgz
 MAKEFILE=	makefile
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 ALL_TARGET=	# empty
 MAKE_JOBS_UNSAFE=	yes
 

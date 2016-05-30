@@ -13,7 +13,7 @@ COMMENT=	Create and manipulate PalmOS database files
 
 BROKEN=		unfetchable
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="" AR=${AR} RANLIB=${RANLIB} LD=${CC}
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LDFLAGS="" AR=${AR} RANLIB=${RANLIB} LD=${CC}
 
 PLIST_FILES=	bin/pdbar \
 		man/man1/pdbar.1.gz

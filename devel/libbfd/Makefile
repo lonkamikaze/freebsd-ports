@@ -28,7 +28,7 @@ INFO=		bfd
 pre-configure:
 # Configure and build pic version of libiberty
 	(cd ${WRKSRC}/../libiberty && \
-		${SETENV} CC="${CC}" CFLAGS="${CFLAGS}" CPP="${CPP}" \
+		${SETENV} CC=${CC:Q} CFLAGS="${CFLAGS}" CPP=${CPP:Q} \
 			CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}" \
 			LIBS="${LIBS}" ${CONFIGURE_ENV} ./configure \
 			${CONFIGURE_ARGS} --build=${CONFIGURE_TARGET} && \

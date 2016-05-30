@@ -417,7 +417,7 @@ CONFIGURE_ARGS+=--prefix="${PREFIX}" \
 		--disable-libstagefright-h264 \
 		--disable-libutvideo \
 		--disable-libsoxr \
-		--cc="${CC}" \
+		--cc=${CC:Q} \
 		--extra-cflags="${FFMPEG_CFLAGS} -I${LOCALBASE}/include" \
 		--extra-ldflags="-L${LOCALBASE}/lib ${FFMPEG_LDFLAGS}" \
 		--extra-libs="-lpthread"

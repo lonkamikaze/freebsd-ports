@@ -12,7 +12,7 @@ COMMENT=	dvi-file previewer for text only devices
 
 CONFLICTS=	ja-dvi2tty-[0-9]*
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${STRIP}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LDFLAGS="${STRIP}"
 
 PLIST_FILES=	bin/disdvi bin/dvi2tty \
 		man/man1/disdvi.1.gz \

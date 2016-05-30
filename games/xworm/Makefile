@@ -14,7 +14,7 @@ COMMENT=	Classic game with apples and hungry worm
 USE_XORG=	x11 xt
 WRKSRC=		${WRKDIR}/XWorm
 ALL_TARGET=	linux
-MAKE_ARGS=	CC="${CC}" INCDIR="-I${LOCALBASE}/include" \
+MAKE_ARGS=	CC=${CC:Q} INCDIR="-I${LOCALBASE}/include" \
 		LINUXFLAGS='${CFLAGS} -DXWORMDIR=\"${DATADIR}\"' \
 		LINUXLINK="-L${LOCALBASE}/lib -lXt -lX11 -lm"
 

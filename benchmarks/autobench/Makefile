@@ -19,7 +19,7 @@ RUN_DEPENDS=	httperf:benchmarks/httperf \
 		gnuplot:math/gnuplot
 
 USES=		gmake perl5 shebangfix
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" DEBUG_FLAGS= \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" DEBUG_FLAGS= \
 		PREFIX=${PREFIX}
 SHEBANG_FILES= 	autobench_admin autobenchd autobench
 

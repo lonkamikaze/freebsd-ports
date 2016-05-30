@@ -11,7 +11,7 @@ COMMENT=	XF86Audio multimedia-key support for XMMS
 
 LIB_DEPENDS=	libxmms.so:multimedia/xmms
 
-MAKE_ARGS=	CC="${CC}" OPT="${CFLAGS}" DEBUG=""
+MAKE_ARGS=	CC=${CC:Q} OPT="${CFLAGS}" DEBUG=""
 
 OPTIONS_DEFINE=	DOCS
 

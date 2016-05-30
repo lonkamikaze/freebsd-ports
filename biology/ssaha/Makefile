@@ -16,7 +16,7 @@ BUILD_WRKSRC=		${WRKSRC}/Binary
 
 USES=		gmake
 USE_GCC=	any
-MAKE_ENV=	CCC="${CXX}" OPTIM="${CXXFLAGS}" THREAD_LIB="-pthread"
+MAKE_ENV=	CCC=${CXX:Q} OPTIM="${CXXFLAGS}" THREAD_LIB="-pthread"
 MAKEFILE=	makefile
 ALL_TARGET=	ssaha
 

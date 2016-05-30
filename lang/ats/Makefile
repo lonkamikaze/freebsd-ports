@@ -39,10 +39,10 @@ post-patch:
 	    ${WRKSRC}/ccomp/runtime/GCATS/Makefile \
 	    ${WRKSRC}/utils/scripts/Makefile \
 	    ${WRKSRC}/libatsdoc/Makefile
-	${SED} -i '' -e 's/ATSCCOMP_def "gcc"/ATSCCOMP_def "${CC}"/' \
+	${SED} -i '' -e 's/ATSCCOMP_def "gcc"/ATSCCOMP_def ${CC:Q}/' \
 	    ${WRKSRC}/utils/scripts/basics.dats
-	${SED} -i '' -e 's/argv_p = "gcc"/argv_p = "${CC}"/' \
-	             -e 's/execvp("gcc", argv)/execvp("${CC}", argv)/' \
+	${SED} -i '' -e 's/argv_p = "gcc"/argv_p = ${CC:Q}/' \
+	             -e 's/execvp("gcc", argv)/execvp(${CC:Q}, argv)/' \
 	    ${WRKSRC}/utils/scripts/atslib.dats
 
 post-configure:

@@ -42,7 +42,7 @@ post-patch:
 	@${REINPLACE_CMD} -e '\
 		s|"ar"|"${AR}"| ; \
 		s|"rsv"|"${ARFLAGS}"| ; \
-		s|"gcc"|"${CC}"| ; \
+		s|"gcc"|${CC:Q}| ; \
 		s|"gzip"|"${GZIP_CMD}"| ; \
 		s|"cp"|"${CP}"| ; \
 		s|"mkdir"|"${MKDIR}"| ; \
@@ -69,7 +69,7 @@ post-patch:
 		${WRKSRC}/pp/build \
 		${WRKSRC}/rss/build \
 		${WRKSRC}/un/build
-	@${REINPLACE_CMD} -e 's|"gcc"|"${CC}"|g; s|-Wall -O2|${CFLAGS}|g' \
+	@${REINPLACE_CMD} -e 's|"gcc"|${CC:Q}|g; s|-Wall -O2|${CFLAGS}|g' \
 		${WRKSRC}/comp/build \
 		${WRKSRC}/def/programs \
 		${WRKSRC}/doc/icmake.doc \

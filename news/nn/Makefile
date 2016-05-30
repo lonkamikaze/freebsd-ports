@@ -12,7 +12,7 @@ MAINTAINER=	johans@FreeBSD.org
 COMMENT=	Newsreader
 
 USES=		tar:Z
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -Iconf" LDFLAGS="${LDFLAGS} -s"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} -Iconf" LDFLAGS="${LDFLAGS} -s"
 
 pre-patch:
 	@${CP} ${WRKSRC}/config.h-dist ${WRKSRC}/config.h.unparsed

@@ -23,7 +23,7 @@ COMMENT=	Implementation of Support Vector Machines (SVMs) in C
 RESTRICTED=	only for education and research
 
 CFLAGS+=	-fPIC
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LD="${CC}" LFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LD=${CC:Q} LFLAGS="${CFLAGS}"
 NO_WRKSUBDIR=	yes
 USES=		gmake
 USE_LDCONFIG=	yes

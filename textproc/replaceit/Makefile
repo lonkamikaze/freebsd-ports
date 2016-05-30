@@ -14,7 +14,7 @@ LICENSE_NAME=	Sendmail License
 LICENSE_FILE=	${WRKSRC}/LICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-MAKE_ARGS=	CC="${CC}" PRF="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} PRF="${CFLAGS}"
 
 PORTDOCS=	CHANGELOG README
 PLIST_FILES=	bin/replaceit

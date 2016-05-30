@@ -16,7 +16,7 @@ GH_TAGNAME=	09cdd52
 USES=		readline
 
 ALL_TARGET=	nfsshell
-MAKE_ARGS=	CC="${CC}" LIBS="-lreadline ${LDFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} LIBS="-lreadline ${LDFLAGS}"
 
 PLIST_FILES=	bin/nfsshell
 

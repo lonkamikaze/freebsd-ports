@@ -16,7 +16,7 @@ LIB_DEPENDS=	libGraphicsMagick++.so:graphics/GraphicsMagick
 USES=		bison gmake
 MAKEFILE=	GNUmakefile
 MAKE_JOBS_UNSAFE=	yes
-MAKE_ARGS=	CXX="${CXX}" \
+MAKE_ARGS=	CXX=${CXX:Q} \
 		CXXFLAGS="${CXXFLAGS} -DUNIX \
 		    `GraphicsMagick++-config --cppflags`"
 

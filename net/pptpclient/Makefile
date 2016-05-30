@@ -15,7 +15,7 @@ LICENSE=	GPLv2+
 
 USES=		perl5
 USE_RC_SUBR=	pptp
-MAKE_ARGS=	CC="${CC}" OPTIMIZE="${CFLAGS}" DEBUG="" \
+MAKE_ARGS=	CC=${CC:Q} OPTIMIZE="${CFLAGS}" DEBUG="" \
 		PPPD="/usr/sbin/ppp" IP="/usr/bin/true"
 CFLAGS+=	-DUSER_PPP
 

@@ -11,7 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Classic role-playing game from the 1980s
 
 USES=		ncurses
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LIBS="${LDFLAGS} -lncurses"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LIBS="${LDFLAGS} -lncurses"
 
 PORTDOCS=	README
 PLIST_FILES=	bin/taipan

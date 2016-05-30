@@ -11,7 +11,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	ELF to a.out conversion tool by Jakub Jelinek and Pete Zaitcev
 
 WRKSRC=		${WRKDIR}/sparc-utils-1.9.orig/elftoaout-2.3
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 PLIST_FILES=	bin/elftoaout \
 		man/man1/elftoaout.1.gz
 

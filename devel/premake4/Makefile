@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/premake-${PORTVERSION:S/.b/-beta/}
 BUILD_WRKSRC=	${WRKSRC}/build/gmake.unix
 
 USES=		gmake zip
-MAKE_ARGS=	ARCH="" CC="${CC}" CXX="${CXX}"
+MAKE_ARGS=	ARCH="" CC=${CC:Q} CXX=${CXX:Q}
 
 PLIST_FILES=	bin/premake4
 

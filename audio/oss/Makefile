@@ -17,7 +17,7 @@ BUILD_DEPENDS=	gawk:lang/gawk
 USES=		tar:bzip2 kmod pkgconfig
 HAS_CONFIGURE=	yes
 CONFIGURE_OUTSOURCE=	yes
-CONFIGURE_ENV=	HOSTCC="${CC}"
+CONFIGURE_ENV=	HOSTCC=${CC:Q}
 ALL_TARGET=	all install
 USE_GNOME=	gtk20
 USE_RC_SUBR=	oss

@@ -13,9 +13,9 @@ COMMENT=	Library from "C Interfaces and Implementations" by David Hanson
 NO_WRKSUBDIR=	yes
 
 MAKEFILE=	makefile
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DMAXALIGN=8 -Iinclude" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} -DMAXALIGN=8 -Iinclude" \
 		AS="${CC} -c -x assembler-with-cpp -traditional" \
-		LD="${CC}" LDFLAGS="" EXTRAS="" BUILDDIR=${PKGNAME}
+		LD=${CC:Q} LDFLAGS="" EXTRAS="" BUILDDIR=${PKGNAME}
 PLIST_SUB=	CIIMAJOR="${CIIMAJOR}"
 
 CIIBUILD=	${WRKSRC}/${PKGNAME}

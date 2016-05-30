@@ -11,7 +11,7 @@ USES=		gmake
 USE_ANT=	yes
 USE_JAVA=	yes
 USE_XORG=	x11 xt
-MAKE_ARGS=	-DCC="${CC}" -DLD="${LD}"
+MAKE_ARGS=	-DCC=${CC:Q} -DLD="${LD}"
 MAKE_ENV+=      ANT_OPTS=-Drelease -DARCH=${ANT_ARCH}
 
 USE_GITHUB=	yes

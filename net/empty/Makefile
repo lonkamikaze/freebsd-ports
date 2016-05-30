@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYRIGHT
 DOCS=		CHANGELOG COPYRIGHT README README.CYGWIN
 EXAMPLES=	README em_ssh.sh em_ssh_2.sh em_sh.sh \
 		em_telnet.sh em_telnet_2.sh emsu.sh runtests.sh
-MAKE_ARGS+=	CC="${CC}"
+MAKE_ARGS+=	CC=${CC:Q}
 USES=		tar:tgz
 
 OPTIONS_DEFINE=	DOCS EXAMPLES

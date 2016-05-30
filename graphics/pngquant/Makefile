@@ -21,7 +21,7 @@ LIB_DEPENDS=	libpng.so:graphics/png
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
 USES=	gmake tar:bzip2
-MAKE_ARGS+=	CC="${CC}"
+MAKE_ARGS+=	CC=${CC:Q}
 
 CPPFLAGS+=	$$(libpng-config --I_opts)
 LDFLAGS+=	$$(libpng-config --ldflags)

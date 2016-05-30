@@ -36,7 +36,7 @@ HAS_CONFIGURE=	yes
 
 PLIST_SUB+=	XINE_PLUGINSDIR=${XINE_PLUGINSDIR}
 
-CONFIGURE_ARGS+=	--cc="${CC}" --cxx="${CXX}" --add-cflags=-I${VDRDIR}
+CONFIGURE_ARGS+=	--cc=${CC:Q} --cxx=${CXX:Q} --add-cflags=-I${VDRDIR}
 
 .if ${PORT_OPTIONS:MLIBEXTRACTOR}
 LIB_DEPENDS+=	libextractor.so:textproc/libextractor

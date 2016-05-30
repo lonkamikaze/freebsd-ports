@@ -12,7 +12,7 @@ MAINTAINER=	knu@FreeBSD.org
 COMMENT=	CUI-based file and directory management tool
 
 MAKE_ENV=	LANG=ja
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" \
 		PREFIX="\$$(DESTDIR)${PREFIX}" \
 		CONFDIR="\$$(DESTDIR)${PREFIX}/etc" \
 

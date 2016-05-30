@@ -22,7 +22,7 @@ USES=		gmake localbase perl5 shebangfix
 SHEBANG_FILES=	scripts/*.pl
 USE_PERL5=	run
 USE_OPENLDAP=	yes
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LD="${CC}" LDFLAGS="${LDFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LD=${CC:Q} LDFLAGS="${LDFLAGS}"
 
 PORTDOCS=	*
 PLIST_FILES=	bin/ldap2dns \

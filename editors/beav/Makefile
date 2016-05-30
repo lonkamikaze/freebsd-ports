@@ -18,7 +18,7 @@ COMMENT=	Binary Editor And Viewer, a full featured binary file editor
 USES=		ncurses
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION:R:S/.//}
 ALL_TARGET=	beav
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DUNIX -DBSD -DNOPROTO"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} -DUNIX -DBSD -DNOPROTO"
 
 OPTIONS_DEFINE=	DOCS
 

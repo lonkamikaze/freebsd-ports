@@ -12,7 +12,7 @@ COMMENT=	Converts Intel assembly language (nasm) to AT&T syntax (gas)
 BROKEN=		unfetchable
 
 GNU_CONFIGURE=	yes
-MAKE_ARGS=	CXX="${CXX}"
+MAKE_ARGS=	CXX=${CXX:Q}
 
 OPTIONS_DEFINE=	DOCS
 

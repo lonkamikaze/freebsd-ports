@@ -16,7 +16,7 @@ USES=		cpe
 CPE_VENDOR=	suckless
 USE_XORG=	x11 xext xproto xrandr xt
 MAKE_ARGS=	PREFIX="${PREFIX}" X11LIB="${LOCALBASE}/lib" \
-		X11INC="${LOCALBASE}/include" CC="${CC}" \
+		X11INC="${LOCALBASE}/include" CC=${CC:Q} \
 		MANPREFIX="${MANPREFIX}/man"
 
 post-patch:

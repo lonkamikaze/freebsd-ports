@@ -35,7 +35,7 @@ post-patch:
 .endif
 
 post-build:
-	cd ${WRKSRC}/lab && ${MAKE} CC="${CC}" CFLAGS="${CFLAGS}" \
+	cd ${WRKSRC}/lab && ${MAKE} CC=${CC:Q} CFLAGS="${CFLAGS}" \
 	    CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}" \
 	    fmtcnv031127
 

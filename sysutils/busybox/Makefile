@@ -24,7 +24,7 @@ CONFLICTS_INSTALL=	busybox-unstable-*
 PORTSCOUT=	skipv:1.25.0
 
 CFLAGS+=	-fno-builtin-mempcpy	# avoid -Wshadow warnings
-MAKE_ARGS=	CC="${CC}" HOSTCC="${CC}" CXX="${CXX}" HOSTCXX="${CXX}" \
+MAKE_ARGS=	CC=${CC:Q} HOSTCC=${CC:Q} CXX=${CXX:Q} HOSTCXX=${CXX:Q} \
 		SKIP_STRIP=y V=1
 USES=		cpe gmake perl5 tar:bzip2
 USE_PERL5=	build

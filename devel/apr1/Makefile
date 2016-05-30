@@ -165,9 +165,9 @@ APU_CONF_ARGS+=	--with-nss=${LOCALBASE}
 APU_CONF_ARGS+=	--without-nss
 .endif
 
-APR_CONF_ENV+=	${CONFIGURE_ENV:O:u} CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"
+APR_CONF_ENV+=	${CONFIGURE_ENV:O:u} CC=${CC:Q} CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"
 # include apu specific CPPFLAGS 1st!
-APU_CONF_ENV+=	${CONFIGURE_ENV:O:u} CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${APU_CPPFLAGS} ${CPPFLAGS}"
+APU_CONF_ENV+=	${CONFIGURE_ENV:O:u} CC=${CC:Q} CFLAGS="${CFLAGS}" CPPFLAGS="${APU_CPPFLAGS} ${CPPFLAGS}"
 
 post-extract:
 # cleanup files not used on this platform

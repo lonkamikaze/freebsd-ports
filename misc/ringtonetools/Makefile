@@ -11,7 +11,7 @@ COMMENT=	Create/convert/listen to ringtones and logos for mobile phones
 
 RESTRICTED=	no-commercial-use
 
-MAKE_ARGS=	CC="${CC}" FLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} FLAGS="${CFLAGS}"
 
 OPTIONS_DEFINE=	DOCS
 

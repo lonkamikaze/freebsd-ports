@@ -20,7 +20,7 @@ USES=		gmake perl5
 USE_PERL5=	build
 USE_LDCONFIG=	yes
 ALL_TARGET=	abacus
-MAKE_ARGS=	CCC="${CXX}" PERL="${PERL}" STRIP="${STRIP_CMD} -x" \
+MAKE_ARGS=	CCC=${CXX:Q} PERL="${PERL}" STRIP="${STRIP_CMD} -x" \
 		ARCHIVE="${AR} ${ARFLAGS}" CCFLAG_DEBOPT="${CXXFLAGS}" \
 		OSI_INCLUDE="${LOCALBASE}/include/coin"
 

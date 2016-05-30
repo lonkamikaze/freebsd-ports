@@ -20,7 +20,7 @@ USES=		tar:bzip2 gmake openal:al,alut
 USE_SDL=	sdl
 USE_GL=		yes
 
-MAKE_ARGS=	CC="${CC}" CXX="${CXX}"
+MAKE_ARGS=	CC=${CC:Q} CXX=${CXX:Q}
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 

@@ -16,7 +16,7 @@ LIB_DEPENDS=	libsectok.so:security/libsectok
 USE_OPENSSL=	yes
 USE_LDCONFIG=	yes
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib
 

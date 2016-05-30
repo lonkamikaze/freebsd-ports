@@ -16,7 +16,7 @@ GH_ACCOUNT=	ascii-boxes
 
 USES=		bison gmake
 ALL_TARGET=	build
-MAKE_ARGS=	CC="${CC}" GLOBALCONF=${GLOBALCONF} CFLAGS="${CFLAGS} -ansi -I. -Iregexp"
+MAKE_ARGS=	CC=${CC:Q} GLOBALCONF=${GLOBALCONF} CFLAGS="${CFLAGS} -ansi -I. -Iregexp"
 
 GLOBALCONF=	${DATADIR}/boxes-config
 

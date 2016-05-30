@@ -11,7 +11,7 @@ MAINTAINER=	mauro@eldritch.com.ar
 COMMENT=	Security scanner for Samba
 
 USES=		gmake
-MAKE_ARGS=	CC="${CC}" FLAGS1="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} FLAGS1="${CFLAGS}"
 
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.o" -delete

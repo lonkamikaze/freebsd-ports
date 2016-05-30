@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=--verbose --disable-tests \
 		--without-sane \
 		--without-tiff \
 		--without-xinerama
-CONFIGURE_ENV=	CPPBIN="${CPP}" FLEX="${LOCALBASE}/bin/flex"
+CONFIGURE_ENV=	CPPBIN=${CPP:Q} FLEX="${LOCALBASE}/bin/flex"
 WINELIBDIR?=	${PREFIX}/lib
 .if !defined(USE_LDCONFIG32)
 USE_LDCONFIG=	${WINELIBDIR} ${WINELIBDIR}/wine

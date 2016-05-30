@@ -60,8 +60,8 @@ pre-configure:
 	@cd ${WRKDIR}/xylib-1.4 \
 		&& ${AUTORECONF} -f -i \
 		&& ${SH} ./configure --disable-shared --without-gui \
-			CC="${CC}" CFLAGS="${CFLAGS} -fPIC" \
-			CXX="${CXX}" CXXFLAGS="${CXXFLAGS} -fPIC" \
+			CC=${CC:Q} CFLAGS="${CFLAGS} -fPIC" \
+			CXX=${CXX:Q} CXXFLAGS="${CXXFLAGS} -fPIC" \
 			CPPFLAGS="-I${LOCALBASE}/include" \
 			LDFLAGS="-L${LOCALBASE}/lib"
 

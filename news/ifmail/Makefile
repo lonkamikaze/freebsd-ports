@@ -13,7 +13,7 @@ USES=		shebangfix
 USERS=		ifmail
 CFLAGS+=	-DHAS_STDARG_H -Wall
 GID!=		id -g
-MAKE_ARGS=	OWNER=${UID} CC="${CC}" GROUP=${GID} CFLAGS="${CFLAGS}"
+MAKE_ARGS=	OWNER=${UID} CC=${CC:Q} GROUP=${GID} CFLAGS="${CFLAGS}"
 
 LMAN3=		parsedate.3
 LMAN8=		ifmail.8 iftoss.8

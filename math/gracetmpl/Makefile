@@ -25,7 +25,7 @@ MAKE_ARGS=	PREFIX="${PREFIX}" \
 		AR="${AR}" \
 		CPP="${CXX} ${LDFLAGS}" \
 		CPPFLAGS="${CXXFLAGS} ${CPPFLAGS}" \
-		CXX="${CXX}" \
+		CXX=${CXX:Q} \
 		PYTHON="${PYTHON_CMD}"
 ALL_TARGET=	all pythonwrap
 INSTALL_TARGET=	install

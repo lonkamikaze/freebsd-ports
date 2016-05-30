@@ -17,7 +17,7 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 # XXX FreeBSD does not implement O_DSYNC and fdatasync at this time.
 CFLAGS+=	-DMDB_DSYNC=O_SYNC -Dfdatasync=fsync
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME:tu}_${PORTVERSION}/libraries/liblmdb
-MAKE_ENV+=	CC="${CC}"
+MAKE_ENV+=	CC=${CC:Q}
 MAKE_ENV+=	prefix="${PREFIX}" INSTALL_PROGRAM="${INSTALL_PROGRAM}"
 MAKE_ENV+=	INSTALL_LIB="${INSTALL_LIB}" INSTALL_DATA="${INSTALL_DATA}" INSTALL_MAN="${INSTALL_MAN}"
 

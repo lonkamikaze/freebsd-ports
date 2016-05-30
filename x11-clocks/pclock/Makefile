@@ -14,7 +14,7 @@ COMMENT=	Simple analog clock program for the Window Maker dock
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}.orig/src
 
 USE_XORG=	x11 xau xdmcp xext xpm
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" OBJS="Main.o Graphics.o" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" OBJS="Main.o Graphics.o" \
 		INCDIR="-I. -I${LOCALBASE}/include ${CPPFLAGS}" \
 		LIBDIR="-L${LOCALBASE}/lib ${LDFLAGS}"
 

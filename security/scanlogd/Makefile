@@ -16,7 +16,7 @@ USE_RC_SUBR=	${PORTNAME}
 
 USERS=		scanlogd
 GROUPS=		scanlogd
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LD="${CC}" LDFLAGS="${LDFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LD=${CC:Q} LDFLAGS="${LDFLAGS}"
 
 PLIST_FILES=	bin/scanlogd man/man8/scanlogd.8.gz \
 		etc/periodic/security/850.scanlogd

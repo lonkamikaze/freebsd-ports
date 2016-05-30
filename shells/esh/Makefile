@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USES=		ncurses readline
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} ${CPPFLAGS}" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} ${CPPFLAGS}" \
 		LIB="${LDFLAGS} -lreadline -lncurses"
 
 INFO=		esh

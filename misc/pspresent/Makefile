@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 
 USE_XORG=	x11 xext xinerama
 USES=		ghostscript:x11,run
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LDLIBS="${LDFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LDLIBS="${LDFLAGS}"
 ALL_TARGET=	pspresent
 
 PLIST_FILES=	bin/pspresent man/man1/pspresent.1.gz

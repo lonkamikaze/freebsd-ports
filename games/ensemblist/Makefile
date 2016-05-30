@@ -16,7 +16,7 @@ LIB_DEPENDS=	libmikmod.so:audio/libmikmod \
 USES=		gmake
 USE_XORG=	xmu
 USE_GL=		glut
-MAKE_ARGS=	CC="${CC}" DATADIR="${DATADIR}"
+MAKE_ARGS=	CC=${CC:Q} DATADIR="${DATADIR}"
 
 PLIST_FILES=	bin/ensemblist man/man6/ensemblist.6.gz
 PORTDATA=	*

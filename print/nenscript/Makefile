@@ -12,7 +12,7 @@ COMMENT=	Clone of the proprietary enscript program from Adobe Systems
 USES=		tar:bzip2
 
 MAKEFILE=	makefile
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 OPTIONS_DEFINE=	DOCS
 

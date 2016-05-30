@@ -76,7 +76,7 @@ NSS_CONFIGURE_WITH=	nss=${LOCALBASE}
 
 .include <bsd.port.options.mk>
 
-CONFIGURE_ENV+=	CC="${CC}"
+CONFIGURE_ENV+=	CC=${CC:Q}
 CONFIGURE_ARGS+=--with-installbuilddir=${DATADIR}/build-2 \
 		--enable-threads \
 		--enable-posix-shm \

@@ -10,7 +10,7 @@ MAINTAINER=	araujo@FreeBSD.org
 COMMENT=	Converts ABC to music sheet in PostScript format
 
 USES=		cpe
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 CPE_VENDOR=	moinejf
 GNU_CONFIGURE=	yes
 ALL_TARGET=	${PORTNAME}

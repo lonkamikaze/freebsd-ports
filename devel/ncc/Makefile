@@ -14,7 +14,7 @@ LICENSE=	ART10
 LICENSE_FILE=	${WRKSRC}/doc/LICENSE
 
 ALL_TARGET=	# empty
-MAKE_ARGS+=	CC="${CXX}" LCFLAGS="${CFLAGS}"
+MAKE_ARGS+=	CC=${CXX:Q} LCFLAGS="${CFLAGS}"
 USES=		ncurses python:run
 CFLAGS+=	-DNOGNU='\"${PREFIX}/include/ncc/nognu\"' -fpermissive
 

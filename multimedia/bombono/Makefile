@@ -35,7 +35,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 MAKE_ARGS=	DVDREAD_INCLUDE=${LOCALBASE}/include \
 		DVDREAD_LIBPATH=${LOCALBASE}/lib \
 		CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" \
-		CC="${CC}" CXX="${CXX}" USE_EXT_BOOST=true
+		CC=${CC:Q} CXX=${CXX:Q} USE_EXT_BOOST=true
 
 .include <bsd.port.options.mk>
 

@@ -24,7 +24,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 USES=		gmake pkgconfig
 USE_GNOME=	gtk20
-MAKE_ARGS=	INSTALLDIR="${PREFIX}" CC="${CC}" CXX="${CXX}"
+MAKE_ARGS=	INSTALLDIR="${PREFIX}" CC=${CC:Q} CXX=${CXX:Q}
 
 SUB_FILES=	pkg-message
 

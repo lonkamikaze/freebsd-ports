@@ -14,8 +14,8 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USES=		gmake localbase tar:bzip2
 USE_GL=		glut
-MAKE_ARGS=	CC="${CC}" CPP="${CXX}" CC_FLAGS="${CXXFLAGS}" \
-		LIB_FLAGS="${LDFLAGS}" GCC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CPP=${CXX:Q} CC_FLAGS="${CXXFLAGS}" \
+		LIB_FLAGS="${LDFLAGS}" GCC=${CC:Q} CFLAGS="${CFLAGS}"
 
 CFLAGS+=	-DINSTALL_DIR=\\\"\${DATADIR}\\\" \
 		-DSCORES_FILE=\\\"/var/games/nighthawk.scores\\\"

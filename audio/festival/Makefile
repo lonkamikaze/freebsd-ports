@@ -35,8 +35,8 @@ CONFIGURE_WRKSRC=	${WRKDIR}/festival
 USES=		gmake
 SPEECHTOOLS=	${WRKSRC}/speech_tools
 FESTIVAL=	${WRKSRC}/festival
-MAKE_ARGS+=	CC="${CC}" GCC="${CC}" \
-		CXX="${CXX}" GXX="${CXX}" \
+MAKE_ARGS+=	CC=${CC:Q} GCC=${CC:Q} \
+		CXX=${CXX:Q} GXX=${CXX:Q} \
 		EST_HOME=${SPEECHTOOLS}
 WRKSRC=		${WRKDIR}
 
@@ -76,7 +76,7 @@ ${m:tu}_CONFIGURE_ENABLE=${m}
 do-configure:
 .for d in speech_tools festival
 	@cd ${WRKDIR}/$d && \
-		if ! ${SETENV} CC="${CC}" CPP="${CPP}" CXX="${CXX}" \
+		if ! ${SETENV} CC=${CC:Q} CPP=${CPP:Q} CXX=${CXX:Q} \
 		CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 		${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}; then \
 		${ECHO_CMD} "===>  configuration script for $d failed."; \

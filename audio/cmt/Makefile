@@ -18,7 +18,7 @@ BUILD_WRKSRC=	${WRKDIR}/${PORTNAME}/src
 
 USES=		gmake tar:tgz
 MAKEFILE=	makefile
-MAKE_ARGS=	CXX="${CXX}" \
+MAKE_ARGS=	CXX=${CXX:Q} \
 		CXXFLAGS="${CXXFLAGS} -fPIC -I${LOCALBASE}/include"
 ALL_TARGET=	targets
 

@@ -10,7 +10,7 @@ MAINTAINER=	johans@FreeBSD.org
 COMMENT=	Console tetrinet client
 
 USES=		ncurses
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DHAVE_IPV6 -fno-builtin-log"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} -DHAVE_IPV6 -fno-builtin-log"
 PLIST_FILES=	bin/tetrinet bin/tetrinet-server
 
 OPTIONS_DEFINE=	DOCS

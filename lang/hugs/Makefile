@@ -37,7 +37,7 @@ post-patch:
 		${WRKSRC}/packages/GLUT/configure \
 		${WRKSRC}/packages/X11/configure \
 		${WRKSRC}/packages/HGL/configure
-	@${REINPLACE_CMD} -e 's,"gcc","${CC}",g' \
+	@${REINPLACE_CMD} -e 's,"gcc",${CC:Q},g' \
 		${WRKSRC}/hsc2hs/Main.hs
 
 do-build:

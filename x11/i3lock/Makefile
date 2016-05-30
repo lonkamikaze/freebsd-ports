@@ -19,7 +19,7 @@ LIB_DEPENDS=	libcairo.so:graphics/cairo \
 		libxkbcommon.so:x11/libxkbcommon
 
 MAKE_ARGS=	PREFIX="${PREFIX}" X11LIB="${LOCALBASE}/lib" \
-		X11INC="${LOCALBASE}/include" CC="${CC}" \
+		X11INC="${LOCALBASE}/include" CC=${CC:Q} \
 		MANDIR="${MANPREFIX}/man"
 
 PLIST_FILES=	"@mode 4755" bin/i3lock @mode \

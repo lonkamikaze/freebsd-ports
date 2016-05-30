@@ -73,7 +73,7 @@ PLIST_SUB+=	HTMLDOCS=""
 post-configure:
 	@(cd ${WRKSRC}/src/libs/gnulib && \
 	    ${SET_LATE_CONFIGURE_ARGS} \
-	    if ! ${SETENV} CC="${CC}" CPP="${CPP}" CXX="${CXX}" \
+	    if ! ${SETENV} CC=${CC:Q} CPP=${CPP:Q} CXX=${CXX:Q} \
 	    CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 	    INSTALL="/usr/bin/install -c" \
 	    INSTALL_DATA="${INSTALL_DATA}" \

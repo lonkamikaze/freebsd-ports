@@ -16,7 +16,7 @@ LICENSE_FILE=	${WRKSRC}/readme.txt
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USES=		dos2unix iconv tar:tgz
-MAKE_ARGS+=	CPP="${CXX}" CC="${CC}" OBJ="${UNALZ_OBJS}" \
+MAKE_ARGS+=	CPP=${CXX:Q} CC=${CC:Q} OBJ="${UNALZ_OBJS}" \
 		LDFLAGS="${LDFLAGS}" CFLAGS="${CFLAGS}"
 ALL_TARGET=	posix-utf8
 

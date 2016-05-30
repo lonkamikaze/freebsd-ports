@@ -12,7 +12,7 @@ COMMENT=	Open Look-based audio mixer
 
 LIB_DEPENDS=	libxview.so:x11-toolkits/xview
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -I${LOCALBASE}/include -DUSE_XBM_ICON" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} -I${LOCALBASE}/include -DUSE_XBM_ICON" \
 		LDFLAGS="-L${LOCALBASE}/lib" LIBRARIES="-lxview -lolgx -lX11"
 PLIST_FILES=	bin/xvmixer
 

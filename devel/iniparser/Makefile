@@ -12,7 +12,7 @@ COMMENT=	Free stand-alone ini file parsing library
 LICENSE=	MIT
 
 USE_LDCONFIG=	yes
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 ALL_TARGET=
 WRKSRC=		${WRKDIR}/${PORTNAME}
 

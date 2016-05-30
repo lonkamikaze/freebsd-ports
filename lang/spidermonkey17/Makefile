@@ -25,7 +25,7 @@ BROKEN_sparc64=		Does not build on sparc64: fails to link
 USES=		gmake ncurses readline
 MAKEFILE=	Makefile.ref
 ALL_TARGET=	${OPSYS}`${UNAME} -r`_DBG.OBJ/js
-MAKE_ENV+=	CCC="${CXX}"
+MAKE_ENV+=	CCC=${CXX:Q}
 USE_LDCONFIG=	yes
 SRC_DIR=	js/src
 

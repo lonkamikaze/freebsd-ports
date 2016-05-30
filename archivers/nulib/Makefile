@@ -12,7 +12,7 @@ COMMENT=	NuFX archive utility
 
 USES=		tar:Z
 WRKSRC=		${WRKDIR}/nulib
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 PLIST_FILES=	bin/${PORTNAME} man/man1/${PORTNAME}.1.gz
 

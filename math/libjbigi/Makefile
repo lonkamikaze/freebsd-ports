@@ -25,7 +25,7 @@ WRKSRC=		${WRKDIR}/i2p-${PORTVERSION}/core/c
 PLIST_FILES=	%%JAVAJARDIR%%/jbigi.jar
 
 JBIGI_BUILD_ENV=	\
-			CC="${CC}" \
+			CC=${CC:Q} \
 			CFLAGS="${CFLAGS} -fPIC -DPIC" \
 			LDFLAGS="${LDFLAGS}" \
 			JAVA_HOME="${JAVA_HOME}" \

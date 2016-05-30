@@ -12,7 +12,7 @@ COMMENT=	HTML to xsl:fo converter
 PLIST_FILES=	bin/html2fo
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/html2fo ${STAGEDIR}${PREFIX}/bin

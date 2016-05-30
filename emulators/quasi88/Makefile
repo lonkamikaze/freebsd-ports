@@ -11,8 +11,8 @@ COMMENT=	PC-8801 emulator for X
 
 USE_XORG=	x11 xext
 USES=		gmake tar:tgz
-MAKE_ENV=	DATADIR="${DATADIR}" _CC="${CC}" _CFLAGS="${CFLAGS}" \
-		_CXX="${CXX}" LD="${CXX}" PROGRAM="${PORTNAME}"
+MAKE_ENV=	DATADIR="${DATADIR}" _CC=${CC:Q} _CFLAGS="${CFLAGS}" \
+		_CXX=${CXX:Q} LD=${CXX:Q} PROGRAM="${PORTNAME}"
 MAKE_ARGS=	ARCH="freebsd"
 
 DESKTOP_ENTRIES="Quasi88" "" "" "quasi88" "" ""

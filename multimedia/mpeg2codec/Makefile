@@ -21,7 +21,7 @@ WRKSRC=		${WRKDIR}/mpeg2
 
 USES=		pkgconfig
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 DATADIR=	${PREFIX}/share/mpeg2
 

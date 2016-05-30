@@ -79,7 +79,7 @@ post-patch:
 
 do-configure:
 	@(cd ${CONFIGURE_WRKSRC} && \
-	if ! ${SETENV} CC="${CC}" CXX="${CXX}" \
+	if ! ${SETENV} CC=${CC:Q} CXX=${CXX:Q} \
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 		INSTALL="${INSTALL} -c " \
 		INSTALL_DATA="${INSTALL_DATA}" \

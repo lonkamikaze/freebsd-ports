@@ -14,7 +14,7 @@ WRKSRC=		${WRKDIR}/SRC-${PORTVERSION}
 PLIST_FILES+=	bin/ariadne bin/prospero
 USES=		gmake tar:Z
 PORTDOCS=	README
-MAKE_ARGS+=	CC="${CC}"
+MAKE_ARGS+=	CC=${CC:Q}
 
 OPTIONS_DEFINE=	DOCS
 

@@ -12,7 +12,7 @@ COMMENT=	Battleships solitaire game with a color interface
 LICENSE=	BSD3CLAUSE
 
 USES=		gmake ncurses
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 ALL_TARGET=	# empty
 
 PLIST_FILES=	bin/${PORTNAME} \

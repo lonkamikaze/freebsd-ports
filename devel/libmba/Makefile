@@ -18,7 +18,7 @@ MAKE_ARGS=	prefix="${STAGEDIR}${PREFIX}"
 post-patch:
 	@${REINPLACE_CMD} -e 's,-g,$$(CFLAGS),' \
 		${WRKSRC}/Makefile
-	@${REINPLACE_CMD} -Ee 's,"g?cc","${CC}",' \
+	@${REINPLACE_CMD} -Ee 's,"g?cc",${CC:Q},' \
 		${WRKSRC}/mktool.c
 
 post-install:

@@ -13,7 +13,7 @@ LICENSE=	GPLv2
 
 ALL_TARGET=	${PORTNAME}
 MAKE_ARGS=	PREFIX="${PREFIX}" \
-		CC="${CC}" LD="${CC}" \
+		CC=${CC:Q} LD=${CC:Q} \
 		CFLAGS="${CFLAGS} -DVERSION=\\\"${PORTVERSION}\\\" -DGLOBAL_CONF=\\\"${PREFIX}/etc/ondirrc\\\"" \
 		LDFLAGS="${LDFLAGS}"
 

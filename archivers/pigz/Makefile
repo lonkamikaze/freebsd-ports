@@ -18,7 +18,7 @@ LIB_DEPENDS=	libzopfli.so:archivers/zopfli
 USES=		cpe gmake localbase
 CPE_VENDOR=	zlib
 ALL_TARGET=	dev
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 LDFLAGS+=	-lz -lzopfli
 
 PLIST_FILES=	bin/pigz bin/pigzn bin/pigzt bin/unpigz

@@ -22,7 +22,7 @@ PLIST_FILES=	bin/pxz man/man1/pxz.1.gz
 MAKE_ENV+=	BINDIR=${PREFIX}/bin \
 		MANDIR=${MANPREFIX}/man
 
-MAKE_ARGS+=	CC="${CC}"
+MAKE_ARGS+=	CC=${CC:Q}
 
 BROKEN_sparc64=	Does not link on sparc64
 

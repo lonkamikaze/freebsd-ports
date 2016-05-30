@@ -29,7 +29,7 @@ MAKE_ARGS=	QTDIR="${QT_PREFIX}" QMAKE="${QMAKE}" \
 		SYSCONFDIR="${PREFIX}/etc" ARCH="${OPSYS}" \
 		CC_FLAGS="${CFLAGS} -DUSE_FILE32API" \
 		CXX_FLAGS="${CXXFLAGS} -DUSE_FILE32API" \
-		CC="${CC}" CXX="${CXX}" LINK="${CXX}"
+		CC=${CC:Q} CXX=${CXX:Q} LINK=${CXX:Q}
 
 DESKTOP_ENTRIES="QMC2" "MAME frontend" "${DATADIR}/img/mame.png" \
 		"${PORTNAME}-sdlmame" "Game;Emulator;Qt;" "true" \

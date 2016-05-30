@@ -30,7 +30,7 @@ OLD_STYLE_REDIRECT_DESC= Enable old style redirection
 DAEMONTOOLS_RUN_DEPENDS=	setuidgid:sysutils/daemontools
 TCPSERVER_RUN_DEPENDS=		tcpserver:sysutils/ucspi-tcp
 
-MAKE_ARGS+=	DIET="" CC="${CC}" CXX="${CXX}"
+MAKE_ARGS+=	DIET="" CC=${CC:Q} CXX=${CXX:Q}
 
 .include <bsd.port.options.mk>
 

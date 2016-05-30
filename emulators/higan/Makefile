@@ -16,7 +16,7 @@ USES=		compiler:c++11-lib gmake pkgconfig tar:xz
 USE_LDCONFIG=	yes
 
 ONLY_FOR_ARCHS=	i386 amd64
-MAKE_ENV+=	compiler="${CXX}" cflags="-x c -std=c99 ${CFLAGS}" \
+MAKE_ENV+=	compiler=${CXX:Q} cflags="-x c -std=c99 ${CFLAGS}" \
 		cppflags="-x c++ -std=c++11 ${CXXFLAGS}"
 
 OPTIONS_DEFINE=		DEBUG

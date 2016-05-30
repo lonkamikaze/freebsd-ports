@@ -19,7 +19,7 @@ USES=		tar:bzip2 gmake
 USE_SDL=	mixer image
 USE_GL=		gl
 MAKEFILE=	makefile
-MAKE_ARGS=	CC="${CXX}" \
+MAKE_ARGS=	CC=${CXX:Q} \
 		MPKDIR="${DATADIR}/" \
 		MUSICDIR="${DATADIR}/music/" \
 		HISCOREDIR="${DATADIR}/" \

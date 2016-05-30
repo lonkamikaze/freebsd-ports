@@ -14,7 +14,7 @@ BROKEN_powerpc64=	Does not build
 
 USES=	gmake python:build
 
-MAKE_ARGS=	HOSTCC="${CC}" LD32BIT_FLAG="-melf_i386_fbsd" \
+MAKE_ARGS=	HOSTCC=${CC:Q} LD32BIT_FLAG="-melf_i386_fbsd" \
 		PYTHON="${PYTHON_CMD}"
 USE_GCC=	yes
 

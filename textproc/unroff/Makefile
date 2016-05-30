@@ -24,7 +24,7 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LIB_DEPENDS=	libelk.so:lang/elk
 
 BUILD_WRKSRC=	${WRKSRC}/src
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DBSD"	\
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} -DBSD"	\
 		INCLUDE="-I${LOCALBASE}/include/elk"	\
 		LIBS="-lm -lelk -L${LOCALBASE}/lib"	\
 		ELKDIR="${LOCALBASE}/share/elk"		\

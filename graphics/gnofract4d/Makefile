@@ -35,7 +35,7 @@ post-patch:
 	@${REINPLACE_CMD}  -e 's|/usr/include/|${LOCALBASE}/include/|; \
 		/# doc files/,+2d; /"html"/,+1d' \
 		${WRKSRC}/setup.py
-	@${REINPLACE_CMD}  -e 's|"CC"|"${CC}"|; s|"gcc"|"${CC}"|' \
+	@${REINPLACE_CMD}  -e 's|"CC"|${CC:Q}|; s|"gcc"|${CC:Q}|' \
 		${WRKSRC}/setup.py \
 		${WRKSRC}/fract4d/test_fractconfig.py \
 		${WRKSRC}/fract4d/fc.py

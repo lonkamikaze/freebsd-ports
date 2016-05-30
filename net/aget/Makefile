@@ -12,7 +12,7 @@ COMMENT=	Multithreaded HTTP download accelerator
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 LDFLAGS+=	-pthread
 
 PLIST_FILES=	bin/aget man/man1/aget.1.gz

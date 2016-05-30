@@ -15,7 +15,7 @@ LIB_DEPENDS=	libgd.so:graphics/gd
 CONFLICTS_INSTALL=	sekrit-twc-zimg-* # include/zimg.h
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-dynaload-cc="${CC}" \
+CONFIGURE_ARGS=	--with-dynaload-cc=${CC:Q} \
 		--with-dynaload-cflags="${CFLAGS} -shared" \
 		--with-gd-includes="${LOCALBASE}/include" \
 		--with-gd-lib="${LOCALBASE}/lib"

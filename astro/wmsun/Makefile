@@ -13,7 +13,7 @@ COMMENT=	Dockapp that displays the rise and set times of the Sun
 WRKSRC_SUBDIR=	wmSun
 
 USE_XORG=	xext xpm x11
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" \
 		INCDIR="-I${LOCALBASE}/include" LIBDIR="-L${LOCALBASE}/lib"
 MAKE_JOBS_UNSAFE=	yes
 

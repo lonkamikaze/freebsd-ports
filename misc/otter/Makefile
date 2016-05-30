@@ -13,7 +13,7 @@ COMMENT=	Theorem prover and finite model searcher
 USES=		shebangfix
 SHEBANG_FILES=	examples-mace2/Perl-examples/commute4_filter
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 PROGRAMS=	anldp mace2 otter
 PORTDOCS=	README anldp.pdf mace2.pdf otter33.pdf

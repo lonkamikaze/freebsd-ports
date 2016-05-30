@@ -12,7 +12,7 @@ COMMENT=	Parallel BZIP2
 LICENSE=	BSD4CLAUSE
 
 USES=		gmake
-MAKE_ARGS=	CFLAGS="${CXXFLAGS}" CC="${CXX}"
+MAKE_ARGS=	CFLAGS="${CXXFLAGS}" CC=${CXX:Q}
 
 PLIST_FILES=	bin/pbzip2 bin/pbunzip2 \
 		man/man1/pbzip2.1.gz man/man1/pbunzip2.1.gz

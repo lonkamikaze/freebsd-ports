@@ -14,7 +14,7 @@ BUILD_DEPENDS=	boost-libs>0:devel/boost-libs
 
 USES=		dos2unix gmake lua:52 pkgconfig tar:bzip2
 MAKEFILE=	makefile
-MAKE_ARGS=	CXX="${CXX}" \
+MAKE_ARGS=	CXX=${CXX:Q} \
 		CFLAGS="${CXXFLAGS} ${CPPFLAGS} -DHAVE_DECL_GETOPT" \
 		LDFLAGS="${LDFLAGS}"
 

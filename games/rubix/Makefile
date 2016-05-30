@@ -14,7 +14,7 @@ BROKEN_powerpc64=	Does not build
 
 USES=		compiler:nestedfct gmake tar:bzip2
 USE_XORG=	x11
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DENGLISH" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} -DENGLISH" \
 		XINC="-I${LOCALBASE}/include" XLIB="-L${LOCALBASE}/lib -lX11"
 ALL_TARGET=	${PORTNAME}
 

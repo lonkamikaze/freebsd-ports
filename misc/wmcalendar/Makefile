@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/Src
 USES=		pkgconfig
 USE_XORG=	xpm
 USE_GNOME=	gtk20
-MAKE_ARGS=	CC="${CC}" \
+MAKE_ARGS=	CC=${CC:Q} \
 		LFLAGS="`pkg-config --libs gtk+-2.0` -L${LOCALBASE}/lib" \
 		CFLAGS="${CFLAGS}" \
 		INCDIR="`pkg-config --cflags gtk+-2.0` -I${LOCALBASE}/include" \

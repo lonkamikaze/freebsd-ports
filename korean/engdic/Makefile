@@ -12,7 +12,7 @@ COMMENT=	English dictionary utility for Korean
 
 USES=		ncurses
 EXTRACT_AFTER_ARGS=	--exclude '*.o'
-MAKE_ARGS=	CC="${CC}" LDADD="-lz ${LDFLAGS} -lncurses"
+MAKE_ARGS=	CC=${CC:Q} LDADD="-lz ${LDFLAGS} -lncurses"
 PLIST_FILES=	bin/edic bin/engdic
 PORTDATA=	[a-z].dic.gz
 

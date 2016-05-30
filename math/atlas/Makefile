@@ -121,7 +121,7 @@ do-configure:
 		> ${WRKSRC}/saved_flags ; \
 	${ECHO_CMD} "Dummy configuration of ATLAS to obtain compiler flags:" ; \
 	${MKDIR} ${WRKSRC}/static ; cd ${WRKSRC}/static ; \
-		../configure --cc="${CC}" --cflags="${CFLAGS}" \
+		../configure --cc=${CC:Q} --cflags="${CFLAGS}" \
 		--prefix="${PREFIX}" -v 2 $${TIMEFLAG} ${ARCHDEFFLAG} \
 		-Ss f77lib " " -Ss pmake "${MAKE} ${_MAKE_JOBS}" \
 		-Fa alg "${STATIC_FLAGS} " -b ${POINTER}
@@ -145,7 +145,7 @@ do-build:
 	${MV} $${LW}/liblapack.a liblapack_${opt}.a ; \
 	${MAKE} -C ${PORTSDIR}/math/lapack clean ; \
 	${ECHO_CMD} "Configuring ${opt} ATLAS:" ; \
-		../configure --cc="${CC}" --cflags="${CFLAGS}" \
+		../configure --cc=${CC:Q} --cflags="${CFLAGS}" \
 		--with-netlib-lapack="${WRKSRC}/${opt}/liblapack_${opt}.a" \
 		--prefix="${PREFIX}" -v 2 $${TIMEFLAG} ${ARCHDEFFLAG} \
 		-Ss f77lib " " -Ss pmake "${MAKE} ${_MAKE_JOBS}" \

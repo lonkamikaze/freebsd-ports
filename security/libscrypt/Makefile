@@ -17,7 +17,7 @@ USE_LDCONFIG=	yes
 USE_GITHUB=	yes
 GH_ACCOUNT=	technion
 
-MAKE_ARGS+=	CC="${CC}" LIBDIR="${PREFIX}"/lib
+MAKE_ARGS+=	CC=${CC:Q} LIBDIR="${PREFIX}"/lib
 
 PLIST_FILES=	include/libscrypt.h \
 		lib/libscrypt.so \

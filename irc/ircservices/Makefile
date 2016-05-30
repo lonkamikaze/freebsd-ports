@@ -22,7 +22,7 @@ SUB_FILES=	pkg-message
 
 DIST_SUBDIR=	${PORTNAME}
 CONFIGURE_ARGS=	-bindest ${PREFIX}/sbin -datdest ${PREFIX}/etc/ircservices \
-				-cflags "${CFLAGS}" -cc "${CC}"
+				-cflags "${CFLAGS}" -cc ${CC:Q}
 MAKE_JOBS_UNSAFE=	yes
 
 IRCSERVICES_LANG?=	EN_US

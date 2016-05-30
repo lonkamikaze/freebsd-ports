@@ -20,7 +20,7 @@ MAKE_ARGS+=	LUA_LIBDIR="${LUA_LIBDIR}" \
 		LUA_INC="${LUA_INCDIR}" \
 		OPENLDAP_LIB="-L${LOCALBASE}/lib -lldap" \
 		LUA_VERSION_NUM="${LUA_VER_STR}0" \
-		CC="${CC}"
+		CC=${CC:Q}
 
 ALL_TARGET=
 

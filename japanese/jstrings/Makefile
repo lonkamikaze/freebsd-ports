@@ -17,7 +17,7 @@ PLIST_FILES=	bin/jstrings man/ja/man1/jstrings.1.gz
 
 USES=		gmake lha
 MAKEFILE=	makefile.gcc
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" BINDIR="${PREFIX}/bin"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" BINDIR="${PREFIX}/bin"
 ALL_TARGET=	jstrings
 
 post-extract:

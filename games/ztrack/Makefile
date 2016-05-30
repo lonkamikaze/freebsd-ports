@@ -14,7 +14,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple ncurses based pseudo-3D driving game
 
 USES=		ncurses
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DHAVE_RANDOM" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} -DHAVE_RANDOM" \
 		LIBS="${LDFLAGS} -lncurses"
 ALL_TARGET=	ztrack
 WRKSRC=		${WRKDIR}/${PORTNAME}

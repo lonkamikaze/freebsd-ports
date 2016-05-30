@@ -18,7 +18,7 @@ USES=		gmake makeinfo perl5
 USE_PERL5=	build
 USE_CSTD=	c99
 MAKEFILE=	makefile
-MAKE_ARGS=	CC="${CC}" \
+MAKE_ARGS=	CC=${CC:Q} \
 		OPTS="${CFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
 		NE_GLOBAL_DIR="${DATADIR}"

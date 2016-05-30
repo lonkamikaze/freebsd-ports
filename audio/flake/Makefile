@@ -11,7 +11,7 @@ COMMENT=	FLAC audio encoder
 
 LICENSE=	LGPL21
 
-CONFIGURE_ARGS+=	--cc="${CC}"
+CONFIGURE_ARGS+=	--cc=${CC:Q}
 HAS_CONFIGURE=	yes
 USES=		gmake tar:bzip2
 MAKE_JOBS_UNSAFE=	yes

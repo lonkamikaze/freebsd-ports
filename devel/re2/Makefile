@@ -10,7 +10,7 @@ COMMENT=	Fast C++ regex library
 
 LICENSE=	BSD3CLAUSE
 
-MAKE_ARGS=	CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" prefix=${PREFIX}
+MAKE_ARGS=	CXX=${CXX:Q} CXXFLAGS="${CXXFLAGS}" prefix=${PREFIX}
 USE_LDCONFIG=	yes
 USES=		compiler:c++11-lang gmake pathfix
 

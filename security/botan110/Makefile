@@ -22,7 +22,7 @@ USES=		compiler gmake python:build tar:tgz
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=	configure.py
 CONFIGURE_ARGS=	--prefix=${PREFIX} --with-bzip2 --with-zlib
-MAKE_ARGS=	CXX="${CXX}" LIB_OPT="${CXXFLAGS}"
+MAKE_ARGS=	CXX=${CXX:Q} LIB_OPT="${CXXFLAGS}"
 USE_LDCONFIG=	yes
 PLIST_FILES=	bin/botan-config-1.10 lib/libbotan-1.10.a lib/libbotan-1.10.so lib/libbotan-1.10.so.1 \
 		lib/libbotan-1.10.so.1.12 libdata/pkgconfig/botan-1.10.pc

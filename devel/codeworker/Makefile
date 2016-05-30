@@ -15,7 +15,7 @@ LICENSE=	LGPL21
 WRKSRC=		${WRKDIR}/CodeWorker${PORTVERSION:S/./_/g}
 
 USES=		dos2unix gmake zip
-MAKE_ARGS=	CC="${CXX}" CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" LFLAGS="-lm"
+MAKE_ARGS=	CC=${CXX:Q} CXX=${CXX:Q} CXXFLAGS="${CXXFLAGS}" LFLAGS="-lm"
 ALL_TARGET=	build
 
 CFLAGS+=	-Dstricmp=strcasecmp

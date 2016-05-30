@@ -12,7 +12,7 @@ COMMENT=	Geek Code Generator
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 PLIST_FILES=	bin/geekcode
 PORTDOCS=	geekcode.txt

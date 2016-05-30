@@ -14,7 +14,7 @@ NO_CDROM=	No commercial redistribution
 
 USES=		tar:Z
 WRKSRC=		${WRKDIR}/PPUnpack
-MAKE_ARGS=	CC="${CC}" COPTS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} COPTS="${CFLAGS}"
 PLIST_FILES=	bin/ppunpack
 ALL_TARGET=	ppunpack
 

@@ -19,7 +19,7 @@ LICENSE=	GPLv2
 
 USES=		gmake
 USE_XORG=	x11
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
 		XLIB="-L${LOCALBASE}/lib -lX11"
 USE_CSTD=	gnu89
 

@@ -19,8 +19,8 @@ ONLY_FOR_ARCHS_REASON=	no targets defined in Makefile
 USES=		dos2unix gmake iconv ncurses tar:bzip2
 DOS2UNIX_FILES=	${PORTDOCS:S,^,doc/,}
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	--cc="${CC}" --with-extraincdir="${LOCALBASE}/include" \
-		--ld="${CC}" --with-extralibdir="${LOCALBASE}/lib" \
+CONFIGURE_ARGS=	--cc=${CC:Q} --with-extraincdir="${LOCALBASE}/include" \
+		--ld=${CC:Q} --with-extralibdir="${LOCALBASE}/lib" \
 		--prefix="${PREFIX}" --datadir="${DATADIR}"
 MAKEFILE=	makefile
 

@@ -20,7 +20,7 @@ USE_GL=		yes
 
 BUILD_WRKSRC=	${WRKSRC}/src
 MAKEFILE=	../build/linux/Makefile
-MAKE_ARGS=	CC="${CXX}"
+MAKE_ARGS=	CC=${CXX:Q}
 MAKE_ENV=	DATADIR="${DATADIR}"
 
 PLIST_FILES=	bin/${PORTNAME}

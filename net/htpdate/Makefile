@@ -13,7 +13,7 @@ COMMENT=	Time synchronization over http utility
 LICENSE=	GPLv2+
 
 USES=	tar:bzip2
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 PLIST_FILES=	bin/${PORTNAME} man/man8/${PORTNAME}.8.gz
 PORTDOCS=	Changelog README

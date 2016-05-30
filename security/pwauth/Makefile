@@ -16,7 +16,7 @@ PLIST_FILES=	"@(,,4555) bin/pwauth" \
 		bin/checkfaillog
 
 ALL_TARGET=	pwauth checkfaillog
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LIB="-lcrypt -lpam"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LIB="-lcrypt -lpam"
 
 WWWUID=		`${ID} -u ${WWWOWN}`
 MINUID?=	1000

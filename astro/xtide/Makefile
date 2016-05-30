@@ -55,8 +55,8 @@ post-patch:
 
 pre-configure:
 	@(cd ${WRKSRC_TCD} && ${SETENV} ${CONFIGURE_ENV} \
-		CC="${CC}" CFLAGS="${CFLAGS} -fPIC" \
-		CXX="${CXX}" CXXFLAGS="${CXXFLAGS} -fPIC" \
+		CC=${CC:Q} CFLAGS="${CFLAGS} -fPIC" \
+		CXX=${CXX:Q} CXXFLAGS="${CXXFLAGS} -fPIC" \
 		${SH} ./configure ${CONFIGURE_ARGS})
 
 pre-build:

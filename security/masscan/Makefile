@@ -17,7 +17,7 @@ USES=		gmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	robertdavidgraham
 CFLAGS+=	-Wno-format
-MAKE_ARGS=	SYS=freebsd CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	SYS=freebsd CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 PLIST_FILES=	bin/masscan man/man8/masscan.8.gz
 

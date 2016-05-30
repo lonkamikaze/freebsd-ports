@@ -13,7 +13,7 @@ COMMENT=	Improved tool for transfer RNA detection
 USES=		perl5 tar:Z
 MAKE_ARGS=	BINDIR="${PREFIX}/bin" \
 		LIBDIR="${DATADIR}" \
-		CC="${CC}" \
+		CC=${CC:Q} \
 		CFLAGS="${CFLAGS}"
 
 PLIST_FILES+=	bin/covels-SE bin/coves-SE bin/eufindtRNA bin/tRNAscan-SE bin/trnascan-1.4 \

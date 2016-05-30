@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}/src
 
 USES=		gmake
 USE_LDCONFIG=	yes
-MAKE_ARGS=	CC="${CXX}"
+MAKE_ARGS=	CC=${CXX:Q}
 
 post-extract:
 	${CP} ${FILESDIR}/Makefile.FreeBSD ${WRKSRC}

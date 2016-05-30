@@ -21,7 +21,7 @@ CONFIGURE_SCRIPT=	Configure
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
 post-patch:
-	${REINPLACE_CMD} -e 's|cctype="gcc"|cctype="${CC}"|' \
+	${REINPLACE_CMD} -e 's|cctype="gcc"|cctype=${CC:Q}|' \
 		${WRKSRC}/Configure
 
 do-install:

@@ -21,7 +21,7 @@ BUILD_WRKSRC=	${WRKSRC}/src
 
 FREETYPE_CONFIG?=	${LOCALBASE}/bin/freetype-config
 
-MAKE_ARGS=	CC="${CC}" FLAGS="${CFLAGS}" \
+MAKE_ARGS=	CC=${CC:Q} FLAGS="${CFLAGS}" \
 		LOCALEOBJ="localef.o" LOCALE_FLAG="-DLOCALE" \
 		MING="-L${LOCALBASE}/lib -lming" \
 		MINGH="-I${LOCALBASE}/include/ming" NOSWFFLAG="" \

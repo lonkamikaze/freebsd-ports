@@ -12,7 +12,7 @@ COMMENT=	Content Aware Image Resizer is an implementation of seam carving
 
 USES=		gmake zip
 
-MAKE_ARGS+=	CC="${CXX}"
+MAKE_ARGS+=	CC=${CXX:Q}
 
 WRKSRC=		${WRKDIR}
 

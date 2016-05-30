@@ -14,7 +14,7 @@ LICENSE=	GPLv2
 
 USES=		perl5 shebangfix tar:tgz
 USE_PERL5=	run
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 SHEBANG_FILES=	mffind.pl
 
 WRKSRC=		${WRKDIR}/${PORTNAME}

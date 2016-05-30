@@ -14,7 +14,7 @@ COMMENT=	Faster DNAML, makes phylogenetic trees using maximum likelihood
 LICENSE=	GPLv2+
 
 BUILD_WRKSRC=	${WRKSRC}/source
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 PORTDOCS=	fastDNAml_doc_1.2.txt fastDNAml_scripts.txt
 

@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 
 USES=		gmake perl5 shebangfix
 HAS_CONFIGURE=	yes
-CONFIGURE_ENV=	CC="${CC}" CXX="${CXX}" PREFIX="${PREFIX}"
+CONFIGURE_ENV=	CC=${CC:Q} CXX=${CXX:Q} PREFIX="${PREFIX}"
 USE_PERL5=	build
 SHEBANG_FILES=	scripts/copyright scripts/youngest
 USE_XORG=	x11

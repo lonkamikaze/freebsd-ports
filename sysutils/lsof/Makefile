@@ -51,7 +51,7 @@ BROKEN=	Not supported on ARM platform below release 10.1 or a more recent curren
 
 CONFIGURE_SCRIPT=	Configure
 CONFIGURE_ARGS=	-n freebsd
-CONFIGURE_ENV=	LSOF_CC="${CC}" FREEBSD_SYS="${SRC_BASE}/sys"
+CONFIGURE_ENV=	LSOF_CC=${CC:Q} FREEBSD_SYS="${SRC_BASE}/sys"
 
 .if !exists(${SRC_BASE}/sys/kern/kern_lockf.c)
 IGNORE=		requires kernel sources

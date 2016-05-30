@@ -18,7 +18,7 @@ LICENSE=	GPLv2
 
 USES=		imake jpeg
 USE_XORG=	xmu xpm xt sm ice xext x11
-MAKE_FLAGS=	BINDIR=${PREFIX}/bin MANDIR=${PREFIX}/man/man1 CC="${CC}" \
+MAKE_FLAGS=	BINDIR=${PREFIX}/bin MANDIR=${PREFIX}/man/man1 CC=${CC:Q} \
 		XAPPLOADDIR=${PREFIX}/lib/X11/app-defaults  -f
 
 .if defined(MAKE_JOBS)

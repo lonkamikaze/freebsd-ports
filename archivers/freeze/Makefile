@@ -15,7 +15,7 @@ COMMENT=	Compression program - often used in QNX
 GNU_CONFIGURE=	yes
 ALL_TARGET=	prog
 
-MAKE_ARGS+=	CFLAGS="${CFLAGS} -I. -DCOMPAT" CC="${CC}"
+MAKE_ARGS+=	CFLAGS="${CFLAGS} -I. -DCOMPAT" CC=${CC:Q}
 
 PORTDOCS=	README
 

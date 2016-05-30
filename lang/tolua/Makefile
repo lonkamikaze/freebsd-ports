@@ -12,7 +12,7 @@ COMMENT=	Tool to integrate C/C++ code with Lua
 
 USES=		gmake lua
 
-MAKE_ARGS=	CC="${CC}" CCPP="${CXX}" \
+MAKE_ARGS=	CC=${CC:Q} CCPP=${CXX:Q} \
 		LUAINC="${LUA_INCDIR}" \
 		LUALIB="${LUA_LIBDIR}" \
 		WARN="${CFLAGS}"

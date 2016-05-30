@@ -17,7 +17,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/ftlib.h:net-mgmt/flow-tools
 
 USES=		alias
 WRKSRC=		${WRKDIR}/${PORTNAME}
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LIBS="${LIBS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LIBS="${LIBS}"
 
 PLIST_FILES=	bin/flow-extract man/man1/${PORTNAME}.1.gz
 

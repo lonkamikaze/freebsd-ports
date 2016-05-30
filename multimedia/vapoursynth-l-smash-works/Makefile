@@ -27,7 +27,7 @@ WRKSRC_SUBDIR=	VapourSynth
 SHEBANG_FILES=	configure
 bash_CMD=	${SH}
 HAS_CONFIGURE=	yes
-CONFIGURE_ENV=	LD="${CC}" REV="${PORTVERSION:E}" \
+CONFIGURE_ENV=	LD=${CC:Q} REV="${PORTVERSION:E}" \
 		HASH="${DISTVERSIONSUFFIX:S/^-g//}"
 CONFIGURE_ARGS=	--prefix="${PREFIX}" \
 		--extra-cflags="${CPPFLAGS} ${CFLAGS}" \

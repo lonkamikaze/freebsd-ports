@@ -16,7 +16,7 @@ LICENSE=	BSD3CLAUSE
 
 USES=		perl5
 USE_PERL5=	configure
-CONFIGURE_ENV+=	CC="${CC}"
+CONFIGURE_ENV+=	CC=${CC:Q}
 
 PLIST_FILES=	%%PERL5_MAN3%%/Socket6.3.gz \
 		%%SITE_ARCH%%/Socket6.pm \

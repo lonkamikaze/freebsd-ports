@@ -26,7 +26,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ENV=		PATH=${LOCALBASE}/${PSP_GCC_STAGE_PREFIX}/bin:${PATH}
 MAKE_ENV=		PATH=${LOCALBASE}/${PSP_GCC_STAGE_PREFIX}/bin:${PATH}
 CONFIGURE_ARGS=		--prefix=${PREFIX} --target="psp"
-MAKE_ARGS+=		CC="${CC}" CFLAGS="${CFLAGS} -g" # Apparently, it doesn't work on the PSP without debug information
+MAKE_ARGS+=		CC=${CC:Q} CFLAGS="${CFLAGS} -g" # Apparently, it doesn't work on the PSP without debug information
 
 # Disable installation of .info files and fix includedir reference.
 post-patch:

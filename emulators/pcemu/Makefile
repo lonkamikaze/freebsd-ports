@@ -17,6 +17,6 @@ RUN_DEPENDS=	mkfontdir:x11-fonts/mkfontdir \
 
 USE_XORG=	x11 xext
 MAKE_ENV=	FILESDIR=${FILESDIR} STAGEDIR=${STAGEDIR}
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 
 .include <bsd.port.mk>

@@ -43,7 +43,7 @@ post-patch:
 
 post-configure:
 	@(cd ${WRKDIR}/${PORTNAME}-core && ${SETENV} ${CONFIGURE_ENV} \
-		CC="${CC}" CXX="${CXX}" \
+		CC=${CC:Q} CXX=${CXX:Q} \
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 		CPPFLAGS="-I${WRKSRC}/include ${CPPFLAGS}" \
 		LDFLAGS="-L${WRKSRC}/src/.libs ${LDFLAGS}" \

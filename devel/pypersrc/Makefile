@@ -38,7 +38,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|tolower|::tolower|' ${WRKSRC}/src/cc/utils_string.hh
 
 post-configure:
-	@(cd ${WRKSRC}/src/ctags-5.5.4 && ${SETENV} CC="${CC}" CPP="${CPP}" \
+	@(cd ${WRKSRC}/src/ctags-5.5.4 && ${SETENV} CC=${CC:Q} CPP=${CPP:Q} \
 		CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}" \
 		${CONFIGURE_ENV} ./configure)
 

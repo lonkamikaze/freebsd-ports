@@ -16,7 +16,7 @@ LIB_DEPENDS=	libxosd.so:misc/xosd
 
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lpthread
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
 		PREFIX="${PREFIX}"
 
 PLIST_FILES=	bin/osd_clock man/man1/osd_clock.1.gz

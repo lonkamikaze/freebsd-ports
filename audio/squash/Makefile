@@ -20,7 +20,7 @@ RUN_DEPENDS=	id3v2:audio/id3v2
 
 USES=		tar:bzip2 gmake
 USE_RUBY=	yes
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 
 OPTIONS_DEFINE=	DOCS
 

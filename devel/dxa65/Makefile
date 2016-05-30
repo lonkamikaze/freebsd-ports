@@ -16,7 +16,7 @@ USES=		gmake
 
 PLIST_FILES=	bin/dxa65 man/man1/dxa.1.gz
 PORTDOCS=	INSTALL
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dxa ${STAGEDIR}${PREFIX}/bin/dxa65

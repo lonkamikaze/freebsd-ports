@@ -38,7 +38,7 @@ post-patch:
 
 post-configure:
 	@(cd ${WRKSRC}/libresample-0.1.3 && ${SETENV} \
-		CC="${CC}" CPP="${CPP}" CXX="${CXX}" \
+		CC=${CC:Q} CPP=${CPP:Q} CXX=${CXX:Q} \
 		CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 		${CONFIGURE_ENV} ./configure)
 

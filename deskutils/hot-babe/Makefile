@@ -12,7 +12,7 @@ MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Small utility which displays the system activity in a special way
 
 USES=		pkgconfig tar:bzip2
-MAKE_ARGS+=	PREFIX="${PREFIX}" CC="${CC}"
+MAKE_ARGS+=	PREFIX="${PREFIX}" CC=${CC:Q}
 USE_GNOME=	gtk20
 
 PORTDOCS=	ChangeLog NEWS TODO LICENSE CONTRIBUTORS copyright config.example

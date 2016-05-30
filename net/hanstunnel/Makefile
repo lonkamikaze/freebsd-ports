@@ -17,7 +17,7 @@ LICENSE_PERMS_FPL=dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 USES=		dos2unix
 DOS2UNIX_FILES=	${LICENSE_FILE_FPL}
-MAKE_ARGS=	GCC="${CC}" GPP="${CXX}" \
+MAKE_ARGS=	GCC=${CC:Q} GPP=${CXX:Q} \
 		CFLAGS="${CFLAGS} -c" LDFLAGS="${LDFLAGS}" \
 		TUN_DEV_FILE="src/tun_dev_freebsd.c"
 PLIST_FILES=	bin/hans

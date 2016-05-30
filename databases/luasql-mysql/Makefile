@@ -27,7 +27,7 @@ MAKE_ARGS=	LUA_DIR=${LUA_SUBDIR} \
 		LUA_VERSION_NUM="${LUA_VER_STR}0" \
 		T=${LUASQL_DRIVER} \
 		WARN="${CFLAGS}" \
-		CC="${CC}"
+		CC=${CC:Q}
 
 USE_CSTD=	gnu89
 CFLAGS+=	-Wno-return-type

@@ -12,7 +12,7 @@ COMMENT=	Phylogenetic Analysis by Maximum Likelihood (PAML)
 
 USES=		gmake tar:tgz
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 BINARIES=	baseml basemlg chi2 codeml evolver pamp yn00
 DOC_FILES=	pamlDOC.pdf pamlFAQs.pdf pamlHistory.txt

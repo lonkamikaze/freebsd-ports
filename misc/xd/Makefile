@@ -13,7 +13,7 @@ COMMENT=	Yet another dump utility
 LICENSE=	BSD4CLAUSE
 
 USES=		uidfix
-MAKE_ARGS=	CC="${CC}" BINDIR="${PREFIX}/bin" \
+MAKE_ARGS=	CC=${CC:Q} BINDIR="${PREFIX}/bin" \
 		MANDIR="${MAN1PREFIX}/man/man"
 
 PLIST_FILES=	bin/xd \

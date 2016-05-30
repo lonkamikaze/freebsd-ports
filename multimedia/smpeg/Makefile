@@ -19,7 +19,7 @@ USES=		gmake libtool
 USE_SDL=	sdl
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	GLBASE="${LOCALBASE}" \
-		CC="${CXX}" REAL_CC="${CC}" \
+		CC=${CXX:Q} REAL_CC=${CC:Q} \
 		SDL_CONFIG="${SDL_CONFIG}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 

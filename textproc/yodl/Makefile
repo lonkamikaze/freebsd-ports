@@ -63,8 +63,8 @@ post-patch:
 		s|"/share/man"|"/man"| ; \
 		s|"/share/doc/yodl"|"/share/doc/${PORTNAME}-${PORTVERSION}"| ; \
 		s|"/share/doc/yodl-doc"|"/share/doc/${PORTNAME}-${PORTVERSION}/doc"| ; \
-		s|"gcc"|"${CC}"| ; \
-		s|"g++"|"${CXX}"|' \
+		s|"gcc"|${CC:Q}| ; \
+		s|"g++"|${CXX:Q}|' \
 		${WRKSRC}/INSTALL.im
 	@${REINPLACE_CMD} -e 's|yodlconverters.1|yodlconverters.1.gz| ; \
 		s|".1"|".1.gz"|' \

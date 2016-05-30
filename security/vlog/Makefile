@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USES=		perl5 tar:tgz
 USE_PERL5=	build
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LIBS="${LDFLAGS} -lcurses -pthread"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LIBS="${LDFLAGS} -lcurses -pthread"
 ALL_TARGET=	it
 
 PLIST_FILES=	bin/vlog man/man1/vlog.1.gz

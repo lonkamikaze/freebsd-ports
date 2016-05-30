@@ -15,7 +15,7 @@ LICENSE=	GPLv3
 USES=		tar:bzip2
 GNU_CONFIGURE=	yes
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 
 PLIST_FILES=	bin/uni2ascii bin/ascii2uni man/man1/uni2ascii.1.gz \
 		man/man1/ascii2uni.1.gz

@@ -39,7 +39,7 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 .include <bsd.port.options.mk>
 
-CONFIGURE_ENV+=	OBJC="${CC}"
+CONFIGURE_ENV+=	OBJC=${CC:Q}
 
 post-patch:
 	${REINPLACE_CMD} 's|-export-dynamic|-Wl,-export-dynamic|' ${WRKSRC}/configure.ac

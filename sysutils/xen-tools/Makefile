@@ -32,10 +32,10 @@ USES=		cpe gmake libtool perl5 pkgconfig python shebangfix localbase
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	HOSTCC="${CC}" CC="${CC}" \
+CONFIGURE_ENV=	HOSTCC=${CC:Q} CC=${CC:Q} \
 		ac_cv_path_BASH=${TRUE} \
 		ac_cv_path_XGETTEXT=${TRUE}
-MAKE_ARGS=	HOSTCC="${CC}" CC="${CC}" GCC="${CC}" cc="${GCC}" \
+MAKE_ARGS=	HOSTCC=${CC:Q} CC=${CC:Q} GCC=${CC:Q} cc="${GCC}" \
 		HOSTCFLAGS="${CFLAGS}" SEABIOS_PATH="${LOCALBASE}/share/seabios/bios.bin"
 QEMU_ARGS=	--disable-gtk \
 		--disable-smartcard-nss \

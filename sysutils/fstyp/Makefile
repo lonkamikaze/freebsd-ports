@@ -11,7 +11,7 @@ COMMENT=	Detect which filesystem type a device/partition contains
 
 USES=		gmake
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	ac_cv_prog_CC="${CC}"
+CONFIGURE_ENV+=	ac_cv_prog_CC=${CC:Q}
 
 PLIST_FILES=	bin/fstyp man/man8/fstyp.8.gz
 

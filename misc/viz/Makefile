@@ -9,7 +9,7 @@ MASTER_SITES=	LOCAL/fenner
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Convert invisible (binary) characters to a visible form
 
-MAKE_ARGS=	CC="${CC}" DEFS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} DEFS="${CFLAGS}"
 USES=		tar:tgz
 
 PLIST_FILES=	bin/viz bin/inviz man/man1/viz.1.gz man/man1/inviz.1.gz

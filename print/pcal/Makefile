@@ -11,7 +11,7 @@ COMMENT=	PostScript calendar program
 
 USES=		shebangfix gmake tar:tgz
 
-MAKE_ENV=	HOST_CC="${CC}"
+MAKE_ENV=	HOST_CC=${CC:Q}
 ALL_TARGET=
 
 PORTDOCS=	ReadMe.txt pcal.html pcalw.html

@@ -20,7 +20,7 @@ GH_TAGNAME=	release_${PORTVERSION:C/\./_/g}
 USES=		gmake makeinfo perl5 tar:bzip2
 USE_PERL5=	build
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	--prefix="${PREFIX}" --cc="${CC}"
+CONFIGURE_ARGS=	--prefix="${PREFIX}" --cc=${CC:Q}
 MAKE_ARGS=	CONFIG_NOLDL=1
 
 OPTIONS_DEFINE=	DOCS EXAMPLES

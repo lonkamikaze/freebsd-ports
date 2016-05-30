@@ -14,7 +14,7 @@ COMMENT=	File splitter, GTK and CLI versions
 USE_GNOME=	#
 USES=		gmake pkgconfig
 
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 
 PORTDOCS=	README
 

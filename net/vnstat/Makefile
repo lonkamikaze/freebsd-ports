@@ -13,7 +13,7 @@ COMMENT=	Console-based network traffic monitor
 
 LICENSE=	GPLv2
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="-I${LOCALBASE}/include" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 INSTALL_TARGET=	bsdinstall
 

@@ -15,7 +15,7 @@ COMMENT=	Monsters, explosions, destruction game for X Window System
 
 USES=		tar:bzip2
 USE_GL=		gl glu
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LIBS="${LIBS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LIBS="${LIBS}"
 
 CFLAGS+=	-I${LOCALBASE}/include/X11 -I${LOCALBASE}/include \
 		-DLINUXVERSION -DLINUXAUDIO

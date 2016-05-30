@@ -28,7 +28,7 @@ PLIST_FILES=	${bin:S,^,bin/,} ${bin:S,^,man/man1/,:S,$,.1.gz,} \
 OPTIONS_DEFINE=	DOCS
 
 pre-build:
-	${ECHO_CMD} "${CC}" > ${WRKSRC}/src/conf-cc
+	${ECHO_CMD} ${CC:Q} > ${WRKSRC}/src/conf-cc
 	${ECHO_CMD} "${CFLAGS}" > ${WRKSRC}/src/conf-cflags
 
 do-install:

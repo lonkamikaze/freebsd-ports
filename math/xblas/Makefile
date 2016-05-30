@@ -19,7 +19,7 @@ HDIR=		include/xblas
 HEADERS=	blas_dense_proto.h blas_enum.h blas_extended.h \
 		blas_extended_private.h blas_extended_proto.h blas_fpu.h \
 		blas_malloc.h f2c-bridge.h
-MAKE_ENV=	EXTRA_LIBS="-lm" LINKER="${CC}" M4="${M4}" RANLIB="${RANLIB}"
+MAKE_ENV=	EXTRA_LIBS="-lm" LINKER=${CC:Q} M4="${M4}" RANLIB="${RANLIB}"
 OPTIONS_DEFINE=	SHARED STATIC DOCS
 OPTIONS_DEFAULT=	SHARED
 SHARED_DESC=	Build a shared library and PIC archive

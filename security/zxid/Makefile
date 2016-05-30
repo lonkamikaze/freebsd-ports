@@ -19,8 +19,8 @@ LIB_DEPENDS=	libcurl.so:ftp/curl
 USES=		gmake localbase tar:tgz
 USE_OPENSSL=	yes
 USE_CSTD=	gnu89
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" \
-		LD="${CC}" LDFLAGS="${LDFLAGS}" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" \
+		LD=${CC:Q} LDFLAGS="${LDFLAGS}" \
 		PREFIX="${PREFIX}" OPENSSL_ROOT="${OPENSSLBASE}" \
 		POSTLIBS="${LDFLAGS}" TARGET="${OPSYS:tl}" \
 		V=1

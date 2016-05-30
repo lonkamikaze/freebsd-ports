@@ -18,7 +18,7 @@ LIB_DEPENDS=	libleveldb.so:databases/leveldb
 
 BROKEN_powerpc64=	does not build
 
-MAKE_ARGS=	CC="${CXX}"
+MAKE_ARGS=	CC=${CXX:Q}
 USE_PERL5=	configure
 USES=		compiler gmake localbase perl5
 

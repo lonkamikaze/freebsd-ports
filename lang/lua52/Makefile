@@ -31,7 +31,7 @@ BUILD_WRKSRC=	${WRKSRC}/src
 MAKE_ARGS+=	MYCFLAGS="${CFLAGS} ${CPPFLAGS} -DLUA_USE_LINUX" \
 		MYLDFLAGS="${LDFLAGS}" \
 		MYLIBS="-Wl,-E -L${LOCALBASE}/lib -ledit" \
-		CC="${CC}" \
+		CC=${CC:Q} \
 		LUA_T=lua52 \
 		LUAC_T=luac52 \
 		LUA_A=liblua-${LUA_VER}.a \

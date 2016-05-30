@@ -15,7 +15,7 @@ COMMENT=	Solitaire card game for X
 USE_XORG=	x11
 PLIST_FILES=	bin/oonsoo
 MAKEFILE=	Makefile.Linux
-MAKE_ARGS=	CC="${CXX}" CPPFLAGS="${CXXFLAGS} -ansi"	\
+MAKE_ARGS=	CC=${CXX:Q} CPPFLAGS="${CXXFLAGS} -ansi"	\
 		SYS_INCLUDE="-I${LOCALBASE}/include"		\
 		SYS_LIBS="-L${LOCALBASE}/lib -lX11"
 MAKE_JOBS_UNSAFE=	yes

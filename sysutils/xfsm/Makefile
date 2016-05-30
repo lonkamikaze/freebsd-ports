@@ -12,7 +12,7 @@ COMMENT=	X File System Monitor
 
 USES=		imake tar:tgz
 USE_XORG=	xbitmaps x11 xext
-MAKE_ARGS=	CC="${CC}" CCOPTIONS="-DFreeBSD"
+MAKE_ARGS=	CC=${CC:Q} CCOPTIONS="-DFreeBSD"
 PLIST_FILES=	bin/xfsm man/man1/${PORTNAME}.1.gz
 
 .include <bsd.port.mk>

@@ -13,7 +13,7 @@ COMMENT=	ICCCM-compliant window manager based on 9wm
 OPTIONS_DEFINE=	DOCS GTK2 XFT
 
 USES=		gmake
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" XROOT="${LOCALBASE}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" XROOT="${LOCALBASE}"
 USE_XORG=	x11 xext xt xaw
 
 # XXX should use LICENSE instead of installing it as part of documentation,

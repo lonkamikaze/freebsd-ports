@@ -54,7 +54,7 @@ CONFIGURE_ENV+=	QMAKESPEC="${QMAKESPEC}" MOC="${MOC}" \
 CONFIGURE_ENV+=	PKG_CONFIG_PATH="${LOCALBASE}/libdata/pkgconfig"
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-CONFIGURE_ARGS=	--prefix="${PREFIX}" --cc="${CC}" --cxx="${CXX}" --dvb-path="${LOCALBASE}/include" \
+CONFIGURE_ARGS=	--prefix="${PREFIX}" --cc=${CC:Q} --cxx=${CXX:Q} --dvb-path="${LOCALBASE}/include" \
 		--libxml2-path="${LOCALBASE}/include/libxml2" --enable-v4l2 --enable-ivtv --enable-xv \
 		--disable-audio-alsa --disable-indev=alsa --disable-outdev=alsa --disable-mythlogserver
 

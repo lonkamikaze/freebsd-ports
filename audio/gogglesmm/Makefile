@@ -21,7 +21,7 @@ USE_GITHUB=	yes
 USES=		compiler:c++11-lang desktop-file-utils gmake pkgconfig sqlite
 USE_GL=		glew
 HAS_CONFIGURE=	yes
-CONFIGURE_ENV=	LINK="${CXX}" \
+CONFIGURE_ENV=	LINK=${CXX:Q} \
 		OPT_CFLAGS="${CXXFLAGS}" \
 		OPT_LDFLAGS="${LDFLAGS}" \
 		RESWRAP="${LOCALBASE}/bin/fox-1.7/reswrap"

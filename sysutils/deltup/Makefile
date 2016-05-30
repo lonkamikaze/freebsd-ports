@@ -27,7 +27,7 @@ BZIP2_103=	1.0.3
 USE_OPENSSL=	yes
 USES=		gmake
 ALL_TARGET=	deltup
-MAKE_ARGS=	CC="${CC}" CXX="${CXX}" PREFIX="${PREFIX}"
+MAKE_ARGS=	CC=${CC:Q} CXX=${CXX:Q} PREFIX="${PREFIX}"
 PLIST_FILES=	bin/deltup \
 		bin/bzip2_1.0.2 \
 		bin/bzip2_1.0.3 \

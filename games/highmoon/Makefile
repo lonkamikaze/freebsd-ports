@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/HighMoon
 
 USES=		gmake
 USE_SDL=	image sdl
-MAKE_ARGS=	CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" LIBS="${LIBS}"
+MAKE_ARGS=	CXX=${CXX:Q} CXXFLAGS="${CXXFLAGS}" LIBS="${LIBS}"
 
 CXXFLAGS+=	`${SDL_CONFIG} --cflags`
 LIBS+=		`${SDL_CONFIG} --libs` -lSDL_image

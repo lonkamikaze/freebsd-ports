@@ -43,7 +43,7 @@ DESTDIRNAME=	BROOT
 MAKE_ARGS+=	RW_USER="${UID}" RW_GROUP="${GID}" RO_GROUP="${GID}" RO_USER="${UID}" \
 		CCLIENT_INCLUDE="-I${LOCALBASE}/include/c-client" \
 		CCLIENT_LIBS="-L${LOCALBASE}/lib -lc-client4" \
-		CC="${CC}" \
+		CC=${CC:Q} \
 		CPPFLAGS="${CFLAGS} -I${ICONV_PREFIX}/include" \
 		LDFLAGS="-L${ICONV_PREFIX}/lib" \
 		PREFIX="${PREFIX}/prayer" \

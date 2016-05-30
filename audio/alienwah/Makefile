@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:audio/ladspa
 
 USES=		gmake
-MAKE_ARGS=	CPP="${CXX}" CXXFLAGS="${CXXFLAGS} -I${LOCALBASE}/include -fPIC"
+MAKE_ARGS=	CPP=${CXX:Q} CXXFLAGS="${CXXFLAGS} -I${LOCALBASE}/include -fPIC"
 
 PLIST_FILES=	lib/ladspa/aw.so
 

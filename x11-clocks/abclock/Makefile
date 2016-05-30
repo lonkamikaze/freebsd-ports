@@ -12,7 +12,7 @@ COMMENT=	Clock for X that displays hours and minutes in an analog fashion
 
 PLIST_FILES=	bin/abclock bin/abc_img
 
-MAKE_ARGS=	CC="${CC}" OPT="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} OPT="${CFLAGS}"
 
 USE_XORG=	x11 xau xdmcp
 

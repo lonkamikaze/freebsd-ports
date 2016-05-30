@@ -17,7 +17,7 @@ USES=		compiler:c++11-lang gmake tar:xz
 ONLY_FOR_ARCHS=	i386 amd64
 
 WRKSRC=		${WRKDIR}/IntelPerformanceCounterMonitor-V${PORTVERSION}
-MAKE_ARGS=	CXX="${CXX}" LIB=-lpthread
+MAKE_ARGS=	CXX=${CXX:Q} LIB=-lpthread
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/*.x ${STAGEDIR}${PREFIX}/sbin

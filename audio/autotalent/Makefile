@@ -18,7 +18,7 @@ RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		gmake
 
-MAKE_ARGS=	CXX="${CXX}" CC="${CC}" CPP="${CPP}" \
+MAKE_ARGS=	CXX=${CXX:Q} CC=${CC:Q} CPP=${CPP:Q} \
 		CXXFLAGS="${CXXFLAGS} -fPIC -I${LOCALBASE}/include"
 
 ALL_TARGET=	targets

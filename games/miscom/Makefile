@@ -17,7 +17,7 @@ USES=		ncurses
 
 ALL_TARGET=	# empty
 
-MAKE_ARGS=	CC="${CC}" DATADIR="${DATADIR}" \
+MAKE_ARGS=	CC=${CC:Q} DATADIR="${DATADIR}" \
 		CFLAGS="${CFLAGS}"
 
 PLIST_FILES=	bin/${PORTNAME} \

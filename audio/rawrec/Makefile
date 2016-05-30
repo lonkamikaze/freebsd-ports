@@ -17,7 +17,7 @@ LICENSE_FILE=	${WRKDIR}/${DISTNAME}/copyright
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 USES=		gmake
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CPPFLAGS} ${CFLAGS}" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CPPFLAGS} ${CFLAGS}" \
 		LDFLAGS="${LDFLAGS} -lm -lpthread"
 
 PLIST_FILES=	bin/rawplay bin/rawrec man/man1/rawplay.1.gz man/man1/rawrec.1.gz

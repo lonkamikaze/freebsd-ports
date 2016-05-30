@@ -40,7 +40,7 @@ INSTALL_TARGET=	install-strip
 
 post-configure:
 	cd ${WRKDIR}/${DISTNAME}/libs/xpdf && \
-	    ${SETENV} CC="${CC}" CPP="${CPP}" CXX="${CXX}" \
+	    ${SETENV} CC=${CC:Q} CPP=${CPP:Q} CXX=${CXX:Q} \
 		CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" \
 		CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" \
 		LIBS="${LIBS}" \

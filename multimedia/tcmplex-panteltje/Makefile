@@ -14,7 +14,7 @@ COMMENT=	Re-write of the A/V multiplexer from the transcode distribution
 LICENSE=	GPLv2 GPLv3
 LICENSE_COMB=	dual
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 ALL_TARGET=	a.out
 
 PORTDOCS=	CHANGES COPYRIGHT README

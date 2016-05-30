@@ -12,7 +12,7 @@ COMMENT=	Dallas Semiconductor 1-wire device reading console application
 LICENSE=	GPLv2
 
 USES=		gmake
-MAKE_ARGS+=	CC="${CC}"
+MAKE_ARGS+=	CC=${CC:Q}
 
 PLIST_FILES=	bin/digitemp_DS9097 bin/digitemp_DS9097U \
 		etc/digitemp.conf.sample \

@@ -57,7 +57,7 @@ INFO=	web2c
 pre-configure:
 	for D in libs/xpdf; do \
 		cd ${WRKDIR}/${DISTNAME}/$$D && \
-		${SETENV} CC="${CC}" CPP="${CPP}" CXX="${CXX}" \
+		${SETENV} CC=${CC:Q} CPP=${CPP:Q} CXX=${CXX:Q} \
 			CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 			LDFLAGS="${LDFLAGS}" LIBS="${LIBS}" \
 			${CONFIGURE_ENV} ${SH} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}; \

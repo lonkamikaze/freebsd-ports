@@ -64,7 +64,7 @@ post-patch:
 
 pre-configure:
 	@(cd ${T4K_WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./configure \
-		--disable-shared ${CONFIGURE_ARGS} CC="${CC}" CXX="${CXX}" \
+		--disable-shared ${CONFIGURE_ARGS} CC=${CC:Q} CXX=${CXX:Q} \
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 		CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}")
 

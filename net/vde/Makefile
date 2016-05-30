@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 CONFLICTS=	vde2-[0-9]*
 
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 USE_LDCONFIG=	yes
 USE_CSTD=	gnu89
 USES=		gmake tar:tgz

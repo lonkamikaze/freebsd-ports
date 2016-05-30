@@ -18,7 +18,7 @@ BUILD_DEPENDS=	${PYNUMPY}
 LIB_DEPENDS=	libplot.so:graphics/plotutils
 
 USES=		gmake python:2
-MAKE_ARGS=	CC="${CC}" \
+MAKE_ARGS=	CC=${CC:Q} \
 		CFLAGS="${CFLAGS} -fPIC" \
 		LIBPLOT_CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBPLOT_LDFLAGS="-L${LOCALBASE}/lib -lplot" \

@@ -12,7 +12,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Portable application/ms-rtf parser
 
 ALL_TARGET=	rtfreader
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 PLIST_FILES=	bin/rtfreader
 
 do-install:

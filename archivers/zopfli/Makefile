@@ -19,7 +19,7 @@ USES=		gmake
 
 ALL_TARGET=	${PORTNAME} ${PORTNAME}png \
 		lib${PORTNAME} lib${PORTNAME}png
-MAKE_ARGS=	CC="${CC}" CXX="${CXX}" CFLAGS="${CFLAGS} ${LDFLAGS}" \
+MAKE_ARGS=	CC=${CC:Q} CXX=${CXX:Q} CFLAGS="${CFLAGS} ${LDFLAGS}" \
 		CXXFLAGS="${CXXFLAGS}"
 CFLAGS+=	-fPIC # XXX Convert into an implicit rule
 LDFLAGS+=	-lm

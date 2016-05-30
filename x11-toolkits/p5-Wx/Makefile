@@ -22,7 +22,7 @@ USES=		compiler:c++11-lib perl5
 USE_CXXSTD=	c++11
 USE_PERL5=	configure
 USE_WX=		3.0
-CONFIGURE_ENV=	CXX="${CXX}"
+CONFIGURE_ENV=	CXX=${CXX:Q}
 
 CFLAGS+=	-pthread -Wno-write-strings
 

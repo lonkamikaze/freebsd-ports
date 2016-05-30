@@ -32,7 +32,7 @@ GTK3_USE=		gnome=gtk30
 PCRE_LIB_DEPENDS=	libpcre.so:devel/pcre
 PCRE_CONFIGURE_WITH=	pcre
 QT4_USE=		qt4=corelib,gui,moc_build
-QT4_CONFIGURE_ENV=	CPP="${CXX}" CCLINK="${CXX}"
+QT4_CONFIGURE_ENV=	CPP=${CXX:Q} CCLINK=${CXX:Q}
 QT4_CONFIGURE_WITH=	qt4
 
 .include <bsd.port.options.mk>

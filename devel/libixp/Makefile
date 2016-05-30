@@ -12,7 +12,7 @@ COMMENT=	Standalone client/server 9P library
 USE_LDCONFIG=	yes
 CFLAGS+=	-I. -I${WRKSRC}/include -fPIC
 LDFLAGS+=	-L. -L${WRKSRC}/lib
-MAKE_ARGS=	PREFIX="${PREFIX}" CC="${CC} -c" LD="${CC}" \
+MAKE_ARGS=	PREFIX="${PREFIX}" CC="${CC} -c" LD=${CC:Q} \
 		CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 
 post-patch:

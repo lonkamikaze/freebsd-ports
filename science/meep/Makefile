@@ -23,7 +23,7 @@ USE_GCC=	yes
 USES=		fortran gettext gmake iconv libtool pathfix pkgconfig
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-MAKE_ARGS+=	CC="${CC}" CXX="${CXX}"
+MAKE_ARGS+=	CC=${CC:Q} CXX=${CXX:Q}
 
 OPTIONS_RADIO=		MPI
 OPTIONS_RADIO_MPI=	OPENMPI MPICH2

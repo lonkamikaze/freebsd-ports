@@ -28,7 +28,7 @@ CONFIGURE_ARGS=	--prefix="${PREFIX}" \
 		--enable-shared \
 		--enable-runtime-cpudetect \
 		--disable-debug \
-		--cc="${CC}"
+		--cc=${CC:Q}
 
 OPTIONS_DEFINE=	ALSA AMR_NB AMR_WB BZIP2 CDIO FAAC FDK_AAC DC1394 DOCS FREETYPE \
 		FREI0R GNUTLS GSM ILBC JACK LAME OPENCV OPENJPEG OPENSSL \

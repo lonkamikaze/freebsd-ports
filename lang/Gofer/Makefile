@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/src
 
 USES=		readline
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DUSE_READLINE=1" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} -DUSE_READLINE=1" \
 		LDFLAGS="${LDFLAGS} -lm -lreadline" OPTFLAGS=""
 
 DOCSDIR=	${PREFIX}/share/doc/Gofer

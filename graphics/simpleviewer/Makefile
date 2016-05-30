@@ -20,7 +20,7 @@ LIB_DEPENDS=	libpng.so:graphics/png \
 USES=		jpeg tar:bzip2
 USE_GL=		glut
 WRKSRC=		${WRKDIR}/sviewgl-src
-MAKE_ARGS=	CC="${CXX}"
+MAKE_ARGS=	CC=${CXX:Q}
 
 PLIST_FILES=	bin/sviewgl
 

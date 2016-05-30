@@ -26,7 +26,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 .include <bsd.port.options.mk>
 
-MAKE_ARGS=	PREFIX="${LOCALBASE}" DEST_PREFIX="${PREFIX}" CC="${CC}"
+MAKE_ARGS=	PREFIX="${LOCALBASE}" DEST_PREFIX="${PREFIX}" CC=${CC:Q}
 
 .if ${PORT_OPTIONS:MULTRAGETOPT}
 LIB_DEPENDS+=	libultragetopt.so:devel/ultragetopt

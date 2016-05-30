@@ -17,7 +17,7 @@ LIB_DEPENDS=	libfreetype.so:print/freetype2
 RUN_DEPENDS=	t1asm:print/t1utils
 
 USES=		pkgconfig shebangfix perl5 uidfix tar:tgz
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} ${CPPFLAGS}" LIBS="${LIBS}" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} ${CPPFLAGS}" LIBS="${LIBS}" \
 		INSTDIR="${STAGEDIR}${PREFIX}" LIBXDIR="${STAGEDIR}${PREFIX}/bin" \
 		OWNER=${BINOWN} GROUP=${BINGRP}
 SHEBANG_FILES=	app/TeX/sfd2map \

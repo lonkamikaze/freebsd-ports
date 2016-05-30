@@ -13,7 +13,7 @@ COMMENT=	Four-Dimensional graphics tumbler for X11
 USE_XORG=	x11
 USES=		tar:tgz
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
 		CLIBS="-lm -lX11 -L${LOCALBASE}/lib"
 
 4VA_DATA_FILES=		16cell.4vd 24cell.4vd 5cell.4vd 600cell.4vd ctor.4vd \

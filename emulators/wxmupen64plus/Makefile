@@ -35,7 +35,7 @@ post-patch:
 
 do-configure:
 	@cd ${WRKSRC} && \
-		${SETENV} CC="${CC}" CPP="${CPP}" CXX="${CXX}" \
+		${SETENV} CC=${CC:Q} CPP=${CPP:Q} CXX=${CXX:Q} \
 		CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 		LDFLAGS="${LDFLAGS}" ${PYTHON_CMD} ${WAF_SCRIPT} \
 				configure --mupenapi=${LOCALBASE}/include/${PORTNAME:S/wx//} \

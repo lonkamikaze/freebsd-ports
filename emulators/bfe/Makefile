@@ -31,7 +31,7 @@ GTK2_CONFIGURE_ON=	--gtk 2.0
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|%%CFLAGS%%|"${CFLAGS}"|g ; \
-		 s|%%CC%%|"${CC}"|g ; \
+		 s|%%CC%%|${CC:Q}|g ; \
 		 s|%%PREFIX%%|"${PREFIX}"|g ; \
 		 s|gtk-config --libs|pkg-config --libs gtk+|g ; \
 		 s|gtk-config --cflags|pkg-config --cflags gtk+|g' \

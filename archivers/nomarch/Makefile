@@ -11,7 +11,7 @@ COMMENT=	Extracts files from the old '.arc' archive format
 
 PLIST_FILES=	bin/nomarch man/man1/nomarch.1.gz
 PORTDOCS=	COPYING ChangeLog NEWS README TODO
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 OPTIONS_DEFINE=	DOCS
 

@@ -13,7 +13,7 @@ COMMENT=	MVD demo data streaming proxy over TCP/IP for QuakeWorld servers
 BROKEN=		unfetchable
 
 ALL_TARGET=	${PORTNAME}
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 WRKSRC=		${WRKDIR}/${PORTNAME}_${PORTVERSION}
 
 do-install:

@@ -202,13 +202,13 @@ do-configure:
 		${WRKSRC}/config
 .if ${PORT_OPTIONS:MTHREADS}
 	cd ${WRKSRC} \
-	&& ${SETENV} CC="${CC}" FREEBSDCC="${CC}" CFLAGS="${CFLAGS}" PERL="${PERL}" \
+	&& ${SETENV} CC=${CC:Q} FREEBSDCC=${CC:Q} CFLAGS="${CFLAGS}" PERL="${PERL}" \
 	./config --prefix=${PREFIX} --openssldir=${OPENSSLDIR} \
 		--install_prefix=${STAGEDIR} \
 		-L${PREFIX}/lib ${EXTRACONFIGURE}
 .else
 	cd ${WRKSRC} \
-	&& ${SETENV} CC="${CC}" FREEBSDCC="${CC}" CFLAGS="${CFLAGS}" PERL="${PERL}" \
+	&& ${SETENV} CC=${CC:Q} FREEBSDCC=${CC:Q} CFLAGS="${CFLAGS}" PERL="${PERL}" \
 	./config --prefix=${PREFIX} --openssldir=${OPENSSLDIR} \
 		--install_prefix=${STAGEDIR} \
 		-L${PREFIX}/lib ${EXTRACONFIGURE}

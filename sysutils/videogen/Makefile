@@ -12,7 +12,7 @@ COMMENT=	Tool for calculating XFree86 modelines
 
 LICENSE=	GPLv2
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 MAKE_JOBS_UNSAFE=yes
 
 PLIST_FILES=	bin/videogen man/man1/videogen.1.gz

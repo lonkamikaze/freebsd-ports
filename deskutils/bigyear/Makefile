@@ -11,7 +11,7 @@ DISTNAME=	${PORTNAME}
 MAINTAINER=	portmaster@BSDforge.com
 COMMENT=	Program to print a large (one month per page) calendar
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 PLIST_FILES=	bin/bigyear man/man1/bigyear.1.gz
 

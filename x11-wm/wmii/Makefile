@@ -24,7 +24,7 @@ MAKE_ARGS=	PREFIX="${PREFIX}" MAN="${MANPREFIX}/man" \
 		INCLUDE="${LOCALBASE}/include" \
 		INCX11="-I${LOCALBASE}/include" \
 		LIBX11="-L${LOCALBASE}/lib -lX11 -lixp" \
-		CC="${CC} -c" LD="${CC}" LIBIXP="" STATIC=""
+		CC="${CC} -c" LD=${CC:Q} LIBIXP="" STATIC=""
 
 OPTIONS_DEFINE=	SLIM_LAYOUT_BOX UTF8
 SLIM_LAYOUT_BOX_DESC=	Build with slim layout boxes

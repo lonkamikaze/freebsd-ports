@@ -22,11 +22,11 @@ RESTRICTED=	Restrictions on for-profit distribution
 USES=		compiler:features gmake perl5
 ALL_TARGET=	world
 MAKE_ARGS=	ADDRUNLIBS= \
-		CC="${CC}" \
+		CC=${CC:Q} \
 		CPP="${CPP} -P -traditional -Dunix -Umsdos" \
 		DOCSDIR="${DOCSDIR}" \
 		DYNLD="${CC} -shared" \
-		LD="${CC}" \
+		LD=${CC:Q} \
 		LD_RUN_PATH="${PREFIX}/lib/mosml" \
 		MOSMLHOME="${MOSMLHOME}" \
 		STRIP="${STRIP_CMD}"

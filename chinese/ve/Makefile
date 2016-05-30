@@ -14,7 +14,7 @@ LICENSE=	GPLv1 GPLv2 GPLv3
 LICENSE_COMB=	dual
 
 USES=		ncurses
-MAKE_ARGS=	CC="${CC}" LIBS="${LDFLAGS} -lncurses"
+MAKE_ARGS=	CC=${CC:Q} LIBS="${LDFLAGS} -lncurses"
 
 PLIST_FILES=	bin/ve \
 		%%DATADIR%%/ve.hlp

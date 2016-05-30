@@ -11,7 +11,7 @@ COMMENT=	Microsoft .CABinet file creator
 
 LICENSE=	GPLv2
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 PLIST_FILES=	bin/lcab
 
 do-install:

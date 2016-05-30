@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 CONFLICTS=	par-[0-9]*
 
 MAKEFILE=	Makefile.Linux
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 
 PLIST_FILES=	bin/${PORTNAME} \
 		man/man1/${PORTNAME}.1.gz

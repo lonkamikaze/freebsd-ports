@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		tar:tgz
 MAKEFILE=	Makefile.bsd
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 
 PLIST_FILES=	sbin/pathneck \
 		sbin/get-choke

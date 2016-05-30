@@ -44,7 +44,7 @@ MAKE_ENV+=	DEBUGB=1
 
 .include <bsd.port.options.mk>
 
-MAKE_ARGS+=CC="${CC}"
+MAKE_ARGS+=CC=${CC:Q}
 
 .if ${PORT_OPTIONS:MGRAYSCALE}
 EXTRA_PATCHES+=	${FILESDIR}/grayscale.diff
@@ -74,7 +74,7 @@ post-patch:
 #.endif
 
 do-configure:
-	cd ${WRKSRC}/qemu/qemu-git && ./configure-small --extra-cflags=-DX49GP --cc="${CC}"
+	cd ${WRKSRC}/qemu/qemu-git && ./configure-small --extra-cflags=-DX49GP --cc=${CC:Q}
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} -u MAKELEVEL -u MAKEFLAGS ${MAKE_CMD} ${MAKE_ARGS}

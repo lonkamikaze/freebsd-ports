@@ -14,7 +14,7 @@ COMMENT=	Debugging malloc() that uses the VM hardware to detect buffer overruns
 USE_LDCONFIG=	yes
 CFLAGS+=	-D__USE_BSD
 
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 PLIST_FILES=	bin/ef.sh lib/libefence.a lib/libefence.so.0 man/man3/efence.3.gz
 
 do-install:

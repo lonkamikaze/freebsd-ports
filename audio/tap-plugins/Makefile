@@ -11,7 +11,7 @@ COMMENT=	LADSPA Plugins by Tom Szilagy
 
 LICENSE=	GPLv2
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -I. -c -fPIC -DPIC" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} -I. -c -fPIC -DPIC" \
 		LDFLAGS="-nostartfiles -shared -Wl,-Bsymbolic -lm"
 
 post-patch:

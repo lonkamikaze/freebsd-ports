@@ -14,7 +14,7 @@ COMMENT=	XML-Conscious PPM Compression
 LIB_DEPENDS=	libexpat.so:textproc/expat2
 
 USES=		iconv gmake
-MAKE_ARGS=	CC="${CXX}" CFLAGS="${CXXFLAGS}" \
+MAKE_ARGS=	CC=${CXX:Q} CFLAGS="${CXXFLAGS}" \
 		CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -lexpat ${ICONV_LIB}"
 GNU_CONFIGURE=	yes

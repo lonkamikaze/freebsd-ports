@@ -30,7 +30,7 @@ MAKE_ARGS+=	PREFIX="${PREFIX}" \
 		LOCDIR="${DATADIR}" \
 		DOCDIR="${DOCSDIR}" \
 		LOGFILE=/var/log/squid/access.log \
-		CC="${CC}" \
+		CC=${CC:Q} \
 		SORT=/usr/bin/sort \
 		INSTALL=/usr/bin/install \
 		LARGEFILE=yes \

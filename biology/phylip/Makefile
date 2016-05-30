@@ -21,7 +21,7 @@ INSTALL_WRKSRC=	${WRKSRC}/src
 USES=		gmake
 USE_XORG=	x11 xaw xt
 MAKEFILE=	Makefile.unx
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -DUNX" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} -DUNX" \
 		DFLAGS="${CFLAGS} -DX -I${LOCALBASE}/include" \
 		DLIBS="-L${LOCALBASE}/lib -lX11 -lXaw -lXt -lm"
 USE_LDCONFIG=	yes

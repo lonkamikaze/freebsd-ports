@@ -12,7 +12,7 @@ COMMENT=	Minimalist window manager based on 9wm
 
 USES=		gmake
 USE_XORG=	x11 xpm xext xrandr xrender
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 
 PORTDOCS=	ChangeLog README TODO
 PLIST_FILES=	bin/evilwm \

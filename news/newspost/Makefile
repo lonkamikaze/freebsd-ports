@@ -13,7 +13,7 @@ COMMENT=	Full-featured Usenet binary autoposter
 LICENSE=	GPLv2
 
 ALL_TARGET=	main
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 PORTDOCS=	README
 PLIST_FILES=	bin/${PORTNAME} \

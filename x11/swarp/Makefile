@@ -17,7 +17,7 @@ USE_XORG=	x11
 MAKE_ARGS=	LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib -lX11" \
 		CFLAGS="${CFLAGS} -I${LOCALBASE}/include \
 			-DVERSION=\\\"${PORTVERSION}\\\"" \
-		LD="${CC}"
+		LD=${CC:Q}
 
 PORTDOCS=	README
 PLIST_FILES=	bin/swarp

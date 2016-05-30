@@ -83,7 +83,7 @@ STRIP_LIBEXEC=	anvil bounce cleanup discard dnsblog error flush lmtp local maste
 MAKEFILEFLAGS+=	DEBUG=
 .endif
 
-MAKEFILEFLAGS+=	pie=yes CC="${CC}" OPT="${CFLAGS}"
+MAKEFILEFLAGS+=	pie=yes CC=${CC:Q} OPT="${CFLAGS}"
 
 .if ${PORT_OPTIONS:MINST_BASE}
 .if defined(SASL_SLAVE)

@@ -10,7 +10,7 @@ MAINTAINER=	onatan@gmail.com
 COMMENT=	Utility to dump MSRPC endpoint information from Windows systems
 
 ALL_TARGET=	dcetest
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 WRKSRC=		${WRKDIR}/${PORTNAME}
 
 PLIST_FILES=	bin/dcetest

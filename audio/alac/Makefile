@@ -14,7 +14,7 @@ COMMENT=	Basic decoder for Apple Lossless Audio Codec files (ALAC)
 BROKEN=		unfetchable
 
 WRKSRC=		${WRKDIR}/${PORTNAME}_decoder
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 ALL_TARGET=	alac
 
 USES=		tar:tgz

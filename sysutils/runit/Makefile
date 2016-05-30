@@ -32,7 +32,7 @@ post-patch:
 
 do-configure:
 	${ECHO_CMD} "${CC} ${CFLAGS}" > ${WRKSRC}/src/conf-cc
-	${ECHO_CMD} "${CC}" > ${WRKSRC}/src/conf-ld
+	${ECHO_CMD} ${CC:Q} > ${WRKSRC}/src/conf-ld
 
 do-build:
 	cd ${WRKSRC} && package/compile && package/check

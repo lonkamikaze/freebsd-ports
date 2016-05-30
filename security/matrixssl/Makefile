@@ -19,7 +19,7 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 WRKSRC=		${WRKDIR}/${DISTNAME}/${PORTNAME}-${PORTVERSION:S/./-/g}-open
 
 USES=		gmake tar:tgz
-MAKE_ARGS=	CC="${CC}" DFLAGS="${CFLAGS}" STRIP="${TEST}"
+MAKE_ARGS=	CC=${CC:Q} DFLAGS="${CFLAGS}" STRIP="${TEST}"
 USE_LDCONFIG=	yes
 
 .include <bsd.port.pre.mk>

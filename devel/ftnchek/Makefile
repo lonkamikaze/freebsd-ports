@@ -16,7 +16,7 @@ PORTSCOUT=	skipv:3.3.a,3.3.b,3.3.c
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir=${PREFIX}/share
-CONFIGURE_ENV=	ac_cv_path_CC="${CC}" ac_cv_path_EMACS="${TRUE}"
+CONFIGURE_ENV=	ac_cv_path_CC=${CC:Q} ac_cv_path_EMACS="${TRUE}"
 MAKE_ARGS=	OPT="${CFLAGS}"
 
 .include <bsd.port.mk>

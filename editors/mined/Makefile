@@ -18,7 +18,7 @@ PORTDOCS=	*
 USES=		desktop-file-utils gmake ncurses
 MAKEFILE=	makefile
 REINPLACE_ARGS=	-i ""
-MAKE_ARGS=	GMAKE="${MAKE_CMD}" CC="${CC}" OPT="${CFLAGS}"
+MAKE_ARGS=	GMAKE="${MAKE_CMD}" CC=${CC:Q} OPT="${CFLAGS}"
 INSTALL_TARGET=	localinstall
 MAKE_JOBS_UNSAFE=	yes
 

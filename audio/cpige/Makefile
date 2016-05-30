@@ -13,7 +13,7 @@ COMMENT=	Icecast/Shoutcast stream ripper
 
 USES=		gmake
 
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 
 PLIST_FILES=	bin/cpige
 

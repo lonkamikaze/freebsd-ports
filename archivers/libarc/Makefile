@@ -13,7 +13,7 @@ COMMENT=	Tiny C decompression library for several popular compression formats
 SOLIB=		libarc.so
 SOVERSION=	1
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS} -I." LN="${LN} -sf" \
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS} -I." LN="${LN} -sf" \
 		SOLIB="${SOLIB}" SOVERSION="${SOVERSION}"
 USE_LDCONFIG=	yes
 

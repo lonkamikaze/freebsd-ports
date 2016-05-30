@@ -45,7 +45,7 @@ do-build:
 	@${ECHO} Building GNU AS
 	@${MKDIR} ${WRKSRC}/gnu/binutils_build
 	@cd ${WRKSRC}/gnu/binutils_build; \
-		${SETENV} CC="${CC}" CPP="${CPP}" CXX="${CXX}" \
+		${SETENV} CC=${CC:Q} CPP=${CPP:Q} CXX=${CXX:Q} \
 		CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 		LDFLAGS="${LDFLAGS}" LIBS="${LIBS}" \
 		${CONFIGURE_ENV} \
@@ -56,7 +56,7 @@ do-build:
 	@${ECHO} Building the GNU C COMPILER
 	@${MKDIR} ${WRKSRC}/gnu/gcc_build
 	@cd ${WRKSRC}/gnu/gcc_build; \
-		${SETENV} CC="${CC}" CPP="${CPP}" CXX="${CXX}" \
+		${SETENV} CC=${CC:Q} CPP=${CPP:Q} CXX=${CXX:Q} \
 		CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 		LDFLAGS="${LDFLAGS}" LIBS="${LIBS}" \
 		${CONFIGURE_ENV} \

@@ -15,7 +15,7 @@ LIB_DEPENDS=	libcompface.so:mail/faces
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 ALL_TARGET=	slrnface
-MAKE_ARGS=	CC="${CC}" C_FLAGS="${CFLAGS}" \
+MAKE_ARGS=	CC=${CC:Q} C_FLAGS="${CFLAGS}" \
 		X_INCL=-I${LOCALBASE}/include \
 		XF_LIB="-L${LOCALBASE}/lib -lcompface"
 USE_XORG=	xt

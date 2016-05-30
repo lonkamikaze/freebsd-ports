@@ -23,7 +23,7 @@ SN_DESC=	Startup notification support
 OPTIONS_DEFAULT=	SHAPE
 
 CXXFLAGS+=	`imlib2-config --cflags` `freetype-config --cflags`
-MAKE_ARGS=	cc="${CXX}" cflags="${CXXFLAGS}"
+MAKE_ARGS=	cc=${CXX:Q} cflags="${CXXFLAGS}"
 SUB_FILES=	pkg-message
 PLIST_FILES=	bin/${PORTNAME}
 PORTDOCS=	README

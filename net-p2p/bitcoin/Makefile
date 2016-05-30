@@ -85,7 +85,7 @@ CONFIGURE_ARGS?=	--without-libs \
 
 CONFIGURE_ENV=	CRYPTO_CFLAGS="-I${OPENSSLINC}" CRYPTO_LIBS="-L${OPENSSLLIB} -lcrypto" \
 		SSL_CFLAGS="-I${OPENSSLINC}" SSL_LIBS="-L${OPENSSLLIB} -lssl" \
-		OBJCXX="${CXX}" OBJCXXFLAGS="${CXXFLAGS}"
+		OBJCXX=${CXX:Q} OBJCXXFLAGS="${CXXFLAGS}"
 MAKE_ENV+=	V=1
 
 PLIST_FILES?=	bin/bitcoin-qt share/applications/bitcoin-qt.desktop \

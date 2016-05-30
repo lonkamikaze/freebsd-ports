@@ -19,7 +19,7 @@ WRKSRC=		${WRKDIR}/d
 
 EXTRACT_AFTER_ARGS=	--exclude "*my*"
 USES=		gmake
-MAKE_ARGS=	CC="${CC}" D_OPTIMIZE= PREFIX=${PREFIX}
+MAKE_ARGS=	CC=${CC:Q} D_OPTIMIZE= PREFIX=${PREFIX}
 
 PORTDOCS=	*
 PLIST_FILES=	bin/make_dparser include/dparse.h include/dparse_tables.h \

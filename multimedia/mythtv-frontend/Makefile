@@ -47,7 +47,7 @@ CONFIGURE_ENV+=	QMAKESPEC="${QMAKESPEC}" MOC="${MOC}" \
 		PKG_CONFIG_PATH="${LOCALBASE}/libdata/pkgconfig"
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-CONFIGURE_ARGS=	--prefix="${PREFIX}" --cc="${CC}" --cxx="${CXX}" --libxml2-path="${LOCALBASE}/include/libxml2" \
+CONFIGURE_ARGS=	--prefix="${PREFIX}" --cc=${CC:Q} --cxx=${CXX:Q} --libxml2-path="${LOCALBASE}/include/libxml2" \
 		--disable-audio-alsa --disable-indev=alsa --disable-outdev=alsa --disable-mythlogserver \
 		--disable-firewire --disable-hdhomerun --disable-v4l2 --disable-ivtv --disable-hdpvr \
 		--disable-dvb --enable-opengl-video --without-bindings=perl,python,php

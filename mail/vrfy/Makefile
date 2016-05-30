@@ -12,7 +12,7 @@ MAINTAINER=	jadawin@FreeBSD.org
 COMMENT=	Verify mail address
 
 WRKSRC=		${WRKDIR}
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" RES=""
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" RES=""
 PLIST_FILES=	bin/vrfy
 
 do-install:

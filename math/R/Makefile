@@ -30,7 +30,7 @@ BUILD_DEPENDS=		${LOCALBASE}/bin/gsed:textproc/gsed \
 			texi2dvi:print/texinfo
 LIB_DEPENDS=		libcurl.so:ftp/curl
 
-CONFIGURE_ENV=		LIBR_LDFLAGS="${LDFLAGS}" OBJC="${CC}" \
+CONFIGURE_ENV=		LIBR_LDFLAGS="${LDFLAGS}" OBJC=${CC:Q} \
 			SED="${LOCALBASE}/bin/gsed" \
 			ac_cv_have_decl_powl=yes ac_cv_have_decl_log1pl=yes
 

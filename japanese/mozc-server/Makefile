@@ -85,11 +85,11 @@ BUILD_MOZC_CMD=	cd ${BUILD_WRKSRC} && \
 		${SETENV} BUILD_COMMAND="${BUILD_WRKSRC}/mozcmake" \
 		    GYP_DEFINES="${GYP_DEFINES}" \
 		    PYTHONPATH=${PYTHON_SITELIBDIR}/gyp \
-		    CC_host="${CC}" \
-		    CC_target="${CC}" \
-		    CXX_host="${CXX}" \
-		    CXX_target="${CXX}" \
-		    LD_host="${CXX}" \
+		    CC_host=${CC:Q} \
+		    CC_target=${CC:Q} \
+		    CXX_host=${CXX:Q} \
+		    CXX_target=${CXX:Q} \
+		    LD_host=${CXX:Q} \
 		    AR_host="${AR}" \
 		    ${PYTHON_CMD} build_mozc.py
 BUILD_MOZC_CMD_BUILD=	${BUILD_MOZC_CMD} build -c ${BUILD_MODE} ${_MAKE_JOBS}

@@ -21,7 +21,7 @@ rc_CMD=		${PREFIX}/bin/rc
 CFLAGS+=	-I. -c
 LDFLAGS+=	-L.
 MANPREFIX=	${PREFIX}/9
-MAKE_ARGS=	PREFIX="${PREFIX}/9" CC="${CC}" MANPREFIX="${MANPREFIX}/man" \
+MAKE_ARGS=	PREFIX="${PREFIX}/9" CC=${CC:Q} MANPREFIX="${MANPREFIX}/man" \
 		CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 MAKE_JOBS_UNSAFE=	yes
 APPS=		ascii awk basename bc cal cat cleanname cmp date dc du dd diff echo ed \

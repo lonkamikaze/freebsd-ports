@@ -13,7 +13,7 @@ COMMENT=	Port scan detection and active defense
 SUB_FILES=	portsentry.sh
 ALL_TARGET=	freebsd
 CFLAGS+=	-DPREFIX=\"${PREFIX}\"
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 WRKSRC=		${WRKDIR}/portsentry_beta
 
 OPTIONS_DEFINE=	DOCS

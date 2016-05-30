@@ -20,7 +20,7 @@ DOS2UNIX_FILES=	Source/LibOpenJPEG/opj_malloc.h \
 		Source/LibRawLite/internal/dcraw_common.cpp
 USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/FreeImage
-MAKE_ARGS=	CC="${CC}" CPP="${CPP}" CXX="${CXX}"
+MAKE_ARGS=	CC=${CC:Q} CPP=${CPP:Q} CXX=${CXX:Q}
 
 CFLAGS+=	-fexceptions -fvisibility=hidden
 CFLAGS_aarch64=	-fPIC

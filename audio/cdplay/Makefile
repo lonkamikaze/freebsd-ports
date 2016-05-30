@@ -15,7 +15,7 @@ MAKE_ARGS=	CFLAGS="${CFLAGS} -c -ansi"	\
 		LFLAGS="${LDFLAGS} -lncurses"   \
 		BINPATH="${PREFIX}/bin/"	\
 		MANPATH="${MANPREFIX}/man/man1/" \
-		CC="${CC}"
+		CC=${CC:Q}
 MAKE_JOBS_UNSAFE=	yes
 
 PLIST_FILES=	bin/cdplay \

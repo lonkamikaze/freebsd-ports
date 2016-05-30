@@ -16,7 +16,7 @@ USES=		gmake
 USE_LDCONFIG=	yes
 MAKEFILE=	nm_gnu.mak
 CXXFLAGS+=	-fPIC
-MAKE_ARGS=	CXX="${CXX}" CXXFLAGS="${CXXFLAGS}"
+MAKE_ARGS=	CXX=${CXX:Q} CXXFLAGS="${CXXFLAGS}"
 ALL_TARGET=	everything
 
 do-install:

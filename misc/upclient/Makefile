@@ -38,7 +38,7 @@ post-patch:
 	@${REINPLACE_CMD} ${REINPLACE_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} \
 		${WRKSRC}/scripts/upchk ${WRKSRC}/scripts/clientchk \
 		${WRKSRC}/src/Makefile
-	@${REINPLACE_CMD} -e 's|CC=gcc|CC="${CC}"|g' \
+	@${REINPLACE_CMD} -e 's|CC=gcc|CC=${CC:Q}|g' \
 		${WRKSRC}/src/Makefile
 
 do-install:

@@ -19,7 +19,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 USES=		tar:bzip2 gmake
 MAKEFILE=	${WRKSRC}/makefiles/Makefile.linux
-MAKE_ARGS=	CC="${CC}" LD="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} LD=${CC:Q} CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 
 PORTDOCS=	*
 PORTEXAMPLES=	*

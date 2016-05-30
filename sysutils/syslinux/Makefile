@@ -17,7 +17,7 @@ RUN_DEPENDS=	mtools:emulators/mtools
 
 USES=		perl5 gmake tar:xz
 USE_PERL5=	build
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 ALL_TARGET=	bios
 
 PLIST_FILES=	bin/syslinux \

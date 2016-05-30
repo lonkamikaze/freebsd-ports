@@ -19,7 +19,7 @@ COMMENT=	Print text directly to X11 root window
 
 USES=		imake
 USE_XORG=	x11 xext
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 
 PLIST_FILES=	bin/root-tail \
 		man/man1/root-tail.1.gz

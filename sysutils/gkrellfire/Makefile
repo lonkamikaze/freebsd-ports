@@ -17,7 +17,7 @@ RUN_DEPENDS=	gkrellm:sysutils/gkrellm2
 PLIST_FILES=	libexec/gkrellm2/plugins/${PORTNAME}.so
 
 USES=		gmake pkgconfig tar:tgz
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/libexec/gkrellm2/plugins

@@ -12,7 +12,7 @@ COMMENT=	Analogous to cdb, but faster
 
 ALL_TARGET=	static sharedlib
 INSTALL_TARGET=	install install-sharedlib
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}" prefix="${PREFIX}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}" prefix="${PREFIX}"
 USE_LDCONFIG=	yes
 USES=		gmake
 

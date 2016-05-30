@@ -14,7 +14,7 @@ COMMENT=	MPEG Layer II audio encoder with multi-channel support
 
 USES=		gmake tar:tgz
 ALL_TARGET=	#
-MAKE_ARGS=	CC="${CC}" OPTIM="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} OPTIM="${CFLAGS}"
 PLIST_SUB=	PKGNAMESUFFIX="${PKGNAMESUFFIX}"
 
 OPTIONS_DEFINE=	DOCS

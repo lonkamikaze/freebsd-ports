@@ -30,8 +30,8 @@ USE_QT4=	corelib network script gui moc_build
 QT_NONSTANDARD=	yes
 CONFIGURE_ARGS=	--program-transform-name="" --with-distributor="FreeBSD ports"
 CONFIGURE_ENV=	PATH="${LOCALBASE}/bin:$$PATH" \
-		CCOMPILER="${CC}" \
-		CXXCOMPILER="${CXX}"
+		CCOMPILER=${CC:Q} \
+		CXXCOMPILER=${CXX:Q}
 REINPLACE_ARGS=	-i ''
 
 PORTDOCS=	*

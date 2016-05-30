@@ -14,7 +14,7 @@ COMMENT=	Tools to accurately transfer 3-D geometry between applications
 LICENSE_FILE=	${WRKSRC}/readme.txt
 
 USES=		iconv:build dos2unix gmake zip
-MAKE_ARGS=	CC="${CC}" CCC="${CXX}"
+MAKE_ARGS=	CC=${CC:Q} CCC=${CXX:Q}
 
 MAKEFILE=	makefile
 BINEXAMPLESDIR=	${PREFIX}/libexec/openNURBS

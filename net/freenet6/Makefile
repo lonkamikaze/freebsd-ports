@@ -12,7 +12,7 @@ MAINTAINER=	edwin@mavetju.org
 COMMENT=	Hexago Freenet6 Tunnel Setup Protocol Client - Free IPv6 tunnel
 
 USES=		gmake tar:tgz
-MAKE_ARGS=	target=freebsd CC="${CC}" CXX="${CXX}" \
+MAKE_ARGS=	target=freebsd CC=${CC:Q} CXX=${CXX:Q} \
 		installdir="${STAGEDIR}${PREFIX}" ETCDIR="${ETCDIR}"
 
 WRKSRC=		${WRKDIR}/gw6c-${DISTVERSION}/tspc-advanced

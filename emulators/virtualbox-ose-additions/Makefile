@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--disable-alsa \
 			--disable-python \
 			--disable-sdl-ttf \
 			--disable-xpcom
-CONFIGURE_ARGS+=	--nofatal --with-gcc="${CC}" --with-g++="${CXX}"
+CONFIGURE_ARGS+=	--nofatal --with-gcc=${CC:Q} --with-g++=${CXX:Q}
 
 CONFLICTS_INSTALL=	virtualbox-ose-[3,4]* \
 			virtualbox-ose-additions-devel-[3,4]* \

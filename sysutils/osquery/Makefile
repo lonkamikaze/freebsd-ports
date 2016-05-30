@@ -30,7 +30,7 @@ LIB_DEPENDS=	libboost_regex.so:devel/boost-libs \
 
 USES=		cmake:outsource gmake libtool python:build compiler:c++11-lib
 CONFIGURE_ENV+=	OSQUERY_BUILD_VERSION="${PORTVERSION}" HOME="${WRKDIR}" \
-		SKIP_TESTS="yes" CC="${CC}" CXX="${CXX}"
+		SKIP_TESTS="yes" CC=${CC:Q} CXX=${CXX:Q}
 CMAKE_ARGS+=	-DFREEBSD=awesome -DCMAKE_SYSTEM_NAME="FreeBSD"
 BLDDIR=		${WRKDIR}/.build/${PORTNAME}
 USE_RC_SUBR=	${PORTNAME}d

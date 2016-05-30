@@ -19,7 +19,7 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/src
 
-MAKE_ARGS=	CC="${CXX}" CXX="${CXX}" CPPFLAGS="${CXXFLAGS}"
+MAKE_ARGS=	CC=${CXX:Q} CXX=${CXX:Q} CPPFLAGS="${CXXFLAGS}"
 ALL_TARGET=	${PORTNAME}
 
 PLIST_FILES=	bin/${PORTNAME}

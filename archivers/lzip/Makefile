@@ -15,7 +15,7 @@ PLIST_FILES=	bin/lzip \
 		man/man1/lzip.1.gz
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	CXX="${CXX}" \
+CONFIGURE_ARGS=	CXX=${CXX:Q} \
 		CXXFLAGS="${CXXFLAGS}" \
 		LDFLAGS="${LDFLAGS}"
 INFO=		lzip

@@ -85,7 +85,7 @@ pre-configure:
 		--prefix=${WRKDIR}/fakeroot \
 		--with-fltk-path=${LOCALBASE} \
 		--build=${CONFIGURE_TARGET} \
-		CC="${CC}" CXX="${CXX}" \
+		CC=${CC:Q} CXX=${CXX:Q} \
 		CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 		CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}")
 

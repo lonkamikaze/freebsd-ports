@@ -10,7 +10,7 @@ MAINTAINER=	bf@FreeBSD.org
 COMMENT=	Checks headers in C/C++ programs
 
 USES=		gmake zip
-MAKE_ARGS=	CXX="${CXX}"
+MAKE_ARGS=	CXX=${CXX:Q}
 
 PLIST_FILES=	bin/${PORTNAME}
 

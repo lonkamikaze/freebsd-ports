@@ -17,7 +17,7 @@ USES=		gmake pathfix
 PATHFIX_MAKEFILEIN=	Makefile
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix="${PREFIX}" \
-		--cc="${CC}" \
+		--cc=${CC:Q} \
 		--extra-cflags="${CPPFLAGS} ${CFLAGS}" \
 		--extra-ldflags="${LDFLAGS}" \
 		--extra-libs="${LIBS}" \

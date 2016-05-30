@@ -44,7 +44,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME:S/c/C/}${PORTVERSION}
 USES=		bison cpe gettext scons compiler:openmp python
 CPE_VENDOR=	csounds
 MAKE_ARGS=	instdir="${STAGEDIR}" prefix="${PREFIX}" \
-		CC="${CC}" CXX="${CXX}" \
+		CC=${CC:Q} CXX=${CXX:Q} \
 		buildCsoundAC=0 buildCsoundVST=0 buildInterfaces=1 \
 		buildRelease=1 buildVirtual=1 dynamicCsoundLibrary=1 \
 		install=1 noDebug=1 useDouble=1 \

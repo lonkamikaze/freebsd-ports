@@ -23,7 +23,7 @@ SHEBANG_FILES=	server/rcon.pl server/rcon2irc/rcon2irc.pl
 WRKSRC=		${WRKDIR}/Nexuiz
 BUILD_WRKSRC=	${WRKSRC}/sources/darkplaces
 MAKEFILE=	BSDmakefile
-MAKE_ARGS=	DP_FS_BASEDIR="${DATADIR}" CC="${CC}" \
+MAKE_ARGS=	DP_FS_BASEDIR="${DATADIR}" CC=${CC:Q} \
 		DP_PRELOAD_DEPENDENCIES=yes DP_LINK_TO_LIBJPEG=yes \
 		CFLAGS_LIBJPEG="-I${LOCALBASE}/include" \
 		OPTIM_RELEASE="${CFLAGS} -fno-strict-aliasing -funroll-loops" \

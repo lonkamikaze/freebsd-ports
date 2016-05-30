@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 PLIST_FILES=	bin/e00conv include/e00compr.h \
 		lib/e00compr.a
 PORTDOCS=	e00compr.html
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/e00conv ${STAGEDIR}${PREFIX}/bin/e00conv

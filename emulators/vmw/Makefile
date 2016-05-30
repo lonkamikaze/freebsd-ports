@@ -14,7 +14,7 @@ ONLY_FOR_ARCHS=	i386 amd64
 WRKSRC=		${WRKDIR}/${PORTNAME}/src
 USES=		iconv
 MAKE_ENV+=	__MAKE_CONF=/dev/null ASFLAGS="${ASFLAGS}"
-MAKE_ENV+=	LD="${CC}"
+MAKE_ENV+=	LD=${CC:Q}
 
 SBINS=		vmw vmshrink vmftp
 

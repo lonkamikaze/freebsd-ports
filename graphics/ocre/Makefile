@@ -21,7 +21,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}/${PORTNAME}
 
 USE_GNOME=	gtk20
 USES=		gettext gmake pkgconfig tar:tgz
-MAKE_ARGS=	CC="${CC}" CFLAGS1="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS1="${CFLAGS}"
 
 post-extract:
 	@cd ${WRKSRC} && ${TAR} --exclude "*.orig" -xof ocre-decsWood-${PORTVERSION}.tgz

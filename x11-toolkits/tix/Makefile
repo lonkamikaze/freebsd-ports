@@ -20,7 +20,7 @@ TIX_LIB_FILE=	${TIX_LIB}.0
 
 pre-configure:
 	@(cd ${WRKSRC} && \
-	    CC="${CC}" ac_cv_path_CC="${CC}" CFLAGS="${CFLAGS}" \
+	    CC=${CC:Q} ac_cv_path_CC=${CC:Q} CFLAGS="${CFLAGS}" \
 	    INSTALL="${INSTALL} -c -o ${BINOWN} -g ${BINGRP}" \
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 	    INSTALL_SCRIPT="${INSTALL_SCRIPT}" \

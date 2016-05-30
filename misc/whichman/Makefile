@@ -10,7 +10,7 @@ MASTER_SITES=	http://main.linuxfocus.org/~guido.socher/ \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Approximate matching utilities to search for manpages and files
 
-MAKE_ARGS=	CC="${CC}" CFLAGS="${CFLAGS}"
+MAKE_ARGS=	CC=${CC:Q} CFLAGS="${CFLAGS}"
 
 PLIST_FILES=	bin/ftff bin/ftwhich bin/whichman \
 		man/man1/ftff.1.gz man/man1/ftwhich.1.gz \

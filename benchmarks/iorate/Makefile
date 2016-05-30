@@ -12,7 +12,7 @@ COMMENT=	General purpose storage I/O benchmarking tool
 
 USES=		alias bison
 MAKEFILE=	makefile
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 NO_WRKSUBDIR=	yes
 
 PORTDOCS=	README README.versions

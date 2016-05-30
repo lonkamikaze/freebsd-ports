@@ -14,7 +14,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USES=		ncurses
 WRKSRC=		${WRKDIR}/sted
-MAKE_ARGS=	CC="${CC}" C_OPTS="${CFLAGS}" L_OPTS="${LDFLAGS} -lncurses"
+MAKE_ARGS=	CC=${CC:Q} C_OPTS="${CFLAGS}" L_OPTS="${LDFLAGS} -lncurses"
 
 PORTDOCS=	CHANGES README
 PLIST_FILES=	bin/sted man/man1/sted.1.gz

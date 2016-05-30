@@ -25,7 +25,7 @@ PLIST_FILES=	bin/pianobar \
 		man/man1/pianobar.1.gz
 
 USES=		alias gmake pkgconfig tar:bzip2
-MAKE_ARGS+=	CC="${CC}" PREFIX="${PREFIX}"
+MAKE_ARGS+=	CC=${CC:Q} PREFIX="${PREFIX}"
 
 CFLAGS+=	-I${LOCALBASE}/include -std=c99
 LDFLAGS+=	-L${LOCALBASE}/lib

@@ -13,7 +13,7 @@ COMMENT=	Great cryptographic library and sample programs
 LICENSE=	GPLv2
 
 USES=		gmake tar:tgz
-MAKE_ARGS=	CC="${CC}" BFLAG="${CFLAGS}" \
+MAKE_ARGS=	CC=${CC:Q} BFLAG="${CFLAGS}" \
 		INSTALL_PATH="${PREFIX}/${DISTNAME}"
 
 PLIST_SUB=	PORTVERSION="${PORTVERSION}"

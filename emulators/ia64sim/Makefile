@@ -15,7 +15,7 @@ LICENSE=	PD
 
 USES=		gmake zip
 MAKEFILE=	makefile.unx
-MAKE_ARGS=	CC="${CC}"
+MAKE_ARGS=	CC=${CC:Q}
 
 WRKSRC=		${WRKDIR}/home/chuck/ia64simcc
 
